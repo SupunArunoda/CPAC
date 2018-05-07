@@ -9,7 +9,6 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>org.eclipse.cpacep</module>
 		<module>org.eclipse.cpacep.ui</module>
 		<module>org.eclipse.cpacep.feature</module>
 	</modules>
