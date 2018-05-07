@@ -11,6 +11,7 @@
 	<modules>
 		<module>org.eclipse.cpacep.ui</module>
 		<module>org.eclipse.cpacep.feature</module>
+		<module>org.eclipse.cpacep.targetplatform</module>
 	</modules>
 
 	<properties>
@@ -68,6 +69,13 @@
 							<arch>x86_64</arch>
 						</environment>
 					</environments>
+					<target>
+						<artifact>
+							<groupId>org.eclipse.cpacep</groupId>
+							<artifactId>targetplatform</artifactId>
+							<version>${version}</version>
+						</artifact>
+					</target>
 				</configuration>
 			</plugin>
 			

@@ -8,7 +8,7 @@
             class="org.eclipse.internal.cpacep.view.CpacepView"
             icon="icons/cpac_logo.png"
             id="org.eclipse.cpacep.ui.view.properties"
-            name="CPACEP">
+            name="CPAChecker">
       </view>
    </extension>
    <extension
@@ -18,7 +18,7 @@
             delegate="org.eclipse.internal.cpacep.launcher.LaunchConfigurationDelegate"
             id="org.eclipse.cpacep.launchConfiguration"
             modes="run"
-            name="CPACEP"
+            name="CPAChecker"
             public="true">
       </launchConfigurationType>
    </extension>
