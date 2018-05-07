@@ -73,7 +73,7 @@
 						<artifact>
 							<groupId>org.eclipse.cpacep</groupId>
 							<artifactId>targetplatform</artifactId>
-							<version>${version}</version>
+							<version>${project.version}</version>
 						</artifact>
 					</target>
 				</configuration>
