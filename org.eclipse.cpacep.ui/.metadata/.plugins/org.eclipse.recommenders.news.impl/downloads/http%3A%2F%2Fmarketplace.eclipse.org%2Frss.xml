@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="http://marketplace.eclipse.org/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="http://marketplace.eclipse.org/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <channel>
     <title>Eclipse Plugins, Bundles and Products - Eclipse Marketplace</title>
     <link>http://marketplace.eclipse.org/</link>
@@ -6,304 +6,210 @@
     <language>en</language>
      <atom:link href="http://marketplace.eclipse.org/rss.xml" rel="self" type="application/rss+xml" />
       <item>
-    <title>JRebel for Eclipse</title>
-    <link>http://marketplace.eclipse.org/content/jrebel-eclipse</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/JRebel_EclipseMarketplace_110x80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/owhite/listings&quot; title=&quot;JRebel ZeroTurnaround&quot;&gt;JRebel ZeroTurnaround&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2011-01-25 08:59&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22ZeroTurnaround%22&quot;&gt;ZeroTurnaround&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2018-05-07 03:25&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;JRebel is a productivity tool that allows developers to reload code changes instantly. It skips the rebuild, restart, and redeploy cycle common in Java development. JRebel enables developers to get more done in the same amount of time and stay in the flow while coding. JRebel supports a majority of real-world enterprise java stacks and is easy to install into existing development environments.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/jrebel-eclipse&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;JRebel for Eclipse&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/jrebel-eclipse&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/jrebel-eclipse&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/jrebel-eclipse&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Tue, 25 Jan 2011 13:59:21 +0000</pubDate>
- <dc:creator>owhite</dc:creator>
- <guid isPermaLink="false">29591 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/jrebel-eclipse#comments</comments>
+    <title>Software.com</title>
+    <link>http://marketplace.eclipse.org/content/softwarecom</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/cody-thumbs-up-blue.png&quot; width=&quot;70&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2018-05-12 11:04&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Software.com%22&quot;&gt;Software.com&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2018-03-30 10:33&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/xluiz/listings&quot; title=&quot;Xavier Luiz&quot;&gt;Xavier Luiz&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;Insights into how you code.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Fri, 30 Mar 2018 14:33:48 +0000</pubDate>
+ <dc:creator>xluiz</dc:creator>
+ <guid isPermaLink="false">4004168 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/softwarecom#comments</comments>
   </item>
   <item>
-    <title>iSphere for RDi 9.5+</title>
-    <link>http://marketplace.eclipse.org/content/isphere-rdi-95</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/isphere_marketplace.jpg&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/traddatz/listings&quot; title=&quot;Thomas Raddatz&quot;&gt;Thomas Raddatz&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2017-01-10 16:11&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22iSphere%20Project%20Team%22&quot;&gt;iSphere Project Team&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sun, 2018-05-06 13:04&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;iSphere is an open source plug-in for WDSCi 7.0 and RDi 8.0+. It delivers high quality extensions for WDSC, RDP and RDi to further improve developer productivity.&lt;/p&gt;
-&lt;p&gt;IBM&#039;s current Eclipse based Integrated Development Environment (IDE) is a huge step beyond SEU, but it still lacks features available only on the green screen. That is where the iSphere Project comes into play, filling in those gaps.&lt;/p&gt;
-&lt;p&gt;Feature list:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Binding Directory Editor&lt;/li&gt;
-&lt;li&gt;Data Area Editor&lt;/li&gt;
-&lt;li&gt;User Space Editor&lt;/li&gt;
-&lt;li&gt;Data Queue Viewer&lt;/li&gt;
-&lt;li&gt;Message File Editor&lt;/li&gt;
-&lt;li&gt;Message File Compare Editor&lt;/li&gt;
-&lt;li&gt;Message File Search&lt;/li&gt;
-&lt;li&gt;Source File Search&lt;/li&gt;
-&lt;li&gt;Source Compare/Merge Editor&lt;/li&gt;
-&lt;li&gt;Spooled Files Subsystem&lt;/li&gt;
-&lt;li&gt;Lpex Task Tags&lt;/li&gt;
-&lt;li&gt;Host Object Decorator&lt;/li&gt;
-&lt;li&gt;RSE Filter Manager&lt;/li&gt;
-&lt;li&gt;Message Subsystem and Monitor&lt;/li&gt;
-&lt;li&gt;Job Log Explorer&lt;/li&gt;
-&lt;li&gt;Journal Explorer&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;iSphere is an Open Source project that is hosted on &lt;a href=&quot;https://sourceforge.net/projects/isphere/&quot; rel=&quot;nofollow&quot;&gt;Source Forge&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/isphere-rdi-95&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;iSphere for RDi 9.5+&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/isphere-rdi-95&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/isphere-rdi-95&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/isphere-rdi-95&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Tue, 10 Jan 2017 21:11:59 +0000</pubDate>
- <dc:creator>traddatz</dc:creator>
- <guid isPermaLink="false">3248963 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/isphere-rdi-95#comments</comments>
+    <title>Java Code Generator - Jmr</title>
+    <link>http://marketplace.eclipse.org/content/java-code-generator-jmr</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/jmr_logo2.png&quot; width=&quot;72&quot; height=&quot;72&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-05-10 10:10&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22JmrTeam%22&quot;&gt;JmrTeam&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2017-08-02 23:41&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/yuxinwork/listings&quot; title=&quot;Xin Yu&quot;&gt;Xin Yu&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;More than just an &lt;strong&gt;entirely free&lt;/strong&gt; Java code generator, It&#039;s also a &lt;strong&gt;Java Development Automation Tool&lt;/strong&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Any&lt;strong&gt; repetitive code&lt;/strong&gt; can be automatically generated.  Zero coupling to your project and without changing anything. You only need to &lt;strong&gt;write templates and set tasks.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Such as, it&#039;s possible to &lt;strong&gt;generate CRUD&lt;/strong&gt; in a few minutes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Template/&lt;/strong&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;strong&gt;/Action → Task → Code/Test Case/Document&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Template:&lt;/strong&gt; Support Java Script(&amp;lt;%%&amp;gt; JSP-like) and Jmr Tag(set/get/for...)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Model:&lt;/strong&gt; Database Model(like Table/View), Java POJO Model, Xml File Model and includes&lt;strong&gt; &lt;/strong&gt;Transform/Mapping/Convert Tool&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Action: &lt;/strong&gt;A Java Class can set Java variables to template.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href=&quot;https://github.com/JmrTeam/generator&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;https://github.com/JmrTeam/generator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Documenation Page:&lt;/strong&gt; &lt;a href=&quot;http://www.jmr-source.com/doc/en/index.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://www.jmr-source.com/doc/en/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中文文档:&lt;/strong&gt; &lt;a href=&quot;http://www.jmr-source.com/doc/zh/index.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://www.jmr-source.com/doc/zh/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Change Log(1.2.6): &lt;/strong&gt; Model support the Oracle comments. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Support any kind of project&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Maven, Gradle, Web, Java, Android, PHP, Python etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Support any kind of framework&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;spring/springMVC, hibernate, ibatis/mybatis, struts/struts2, JPA etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Support any kind of language&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Java the best.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Theme&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Support Dark Theme and other Light Themes&lt;/p&gt;
+&lt;p&gt;Normal code generator flow:&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Thu, 03 Aug 2017 03:41:16 +0000</pubDate>
+ <dc:creator>yuxinwork</dc:creator>
+ <guid isPermaLink="false">3581018 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/java-code-generator-jmr#comments</comments>
   </item>
   <item>
-    <title>Java Antidecompiler</title>
-    <link>http://marketplace.eclipse.org/content/java-antidecompiler</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/bis_logo.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/ybendersky/listings&quot; title=&quot;Yury Bendersky&quot;&gt;Yury Bendersky&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2012-11-20 09:09&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22BIS%20Guard%20%26%20Co.%22&quot;&gt;BIS Guard &amp;amp; Co.&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2018-05-05 07:54&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The strongest Java code protection tool&lt;/strong&gt; &lt;strong&gt;Refund &lt;em&gt;200%&lt;/em&gt; if you will crack it&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Supports Java 7, 8, 9, 10, and 11&lt;/li&gt;
-&lt;li&gt;Secure Server Authentication&lt;/li&gt;
-&lt;li&gt;Runs as Eclipse and NetBeans plug-ins, stand-alone, and console Java apps&lt;/li&gt;
-&lt;li&gt;Protects library jars&lt;/li&gt;
-&lt;li&gt;Black box class loading&lt;/li&gt;
-&lt;li&gt;Binary level protection&lt;/li&gt;
-&lt;li&gt;Keyless encryption&lt;/li&gt;
-&lt;li&gt;Unique debug option&lt;/li&gt;
-&lt;li&gt;JavaFX support&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Lazy download:&lt;/strong&gt; &lt;a href=&quot;http://www.bisguard.com/downloads/java_antidecompiler_8.7.zip&quot; rel=&quot;nofollow&quot;&gt; http://www.bisguard.com/downloads/ java_antidecompiler_8.7.zip&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/java-antidecompiler&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;Java Antidecompiler&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/java-antidecompiler&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/java-antidecompiler&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/java-antidecompiler&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Tue, 20 Nov 2012 14:09:33 +0000</pubDate>
- <dc:creator>ybendersky</dc:creator>
- <guid isPermaLink="false">536829 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/java-antidecompiler#comments</comments>
+    <title>SU-statemodeler</title>
+    <link>http://marketplace.eclipse.org/content/su-statemodeler</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/icon_10.png&quot; width=&quot;109&quot; height=&quot;79&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/cpauliadp/listings&quot; title=&quot;Christian Pauli&quot;&gt;Christian Pauli&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-05-10 08:12&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2016-04-04 14:42&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;(imple) &lt;strong&gt;U&lt;/strong&gt;(ML)-statemodeler enables you to develop state-based software systems with only little programming effort. The application is easy to use and does not require any programming skills. So you can focus on functional requirements.&lt;/p&gt;
+&lt;p&gt;The application consists of a graphical editor for UML-statecharts and a code-generator. With the editor every kind of state-based system can be modeled. These models can be compiled into code of several programming languages. Currently&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Java&lt;/li&gt;
+&lt;li&gt;C# and&lt;/li&gt;
+&lt;li&gt;C++&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;are supported. Code-generation is made with one click. The generated code can easlily be integrated in other software systems.&lt;/p&gt;
+&lt;p&gt;The application is available as standalone editor and as plug-in for Eclipse. It is free for private and commercial use.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Mon, 04 Apr 2016 18:42:43 +0000</pubDate>
+ <dc:creator>cpauliadp</dc:creator>
+ <guid isPermaLink="false">2812174 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/su-statemodeler#comments</comments>
   </item>
   <item>
-    <title>Design and Verification Tools (DVT) IDE for e, SystemVerilog, and VHDL</title>
-    <link>http://marketplace.eclipse.org/content/design-and-verification-tools-dvt-ide-e-systemverilog-and-vhdl</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/AMIQ_logo_web_110x63.jpg&quot; width=&quot;110&quot; height=&quot;63&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/emisingname6ia/listings&quot; title=&quot;AMIQ Support&quot;&gt;AMIQ Support&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2006-04-19 08:00&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22AMIQ%20EDA%22&quot;&gt;AMIQ EDA&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2018-05-04 14:17&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;Design and Verification Tools (DVT) is an integrated development environment (IDE) for the &lt;strong&gt;&lt;em&gt;e&lt;/em&gt; language, SystemVerilog, Verilog, VHDL, and mixed language projects&lt;/strong&gt; that also provides &lt;strong&gt;Universal Verification Methodology (UVM) support&lt;/strong&gt;. It is similar to well-known programming tools like Visual Studio®, NetBeans®, and IntelliJ®. DVT comprises a proprietary IEEE standard-compliant parser, a smart code editor, an intuitive GUI, a comprehensive set of features that help with code inspection, navigation, documentation, and debugging, and an innovative linting framework. DVT allows design and verification engineers to overcome the limitations of plain text editors and use a modern and powerful tool that enables them to:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Increase the speed and quality of new code development&lt;/li&gt;
-&lt;li&gt;Easily understand complex or poorly documented source code&lt;/li&gt;
-&lt;li&gt;Simplify the maintenance of legacy code and reusable libraries&lt;/li&gt;
-&lt;li&gt;Accelerate language and methodology learning&lt;/li&gt;
-&lt;li&gt;Automatically generate well-organized source code documentation&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;
-FEATURES  Some of the features that DVT offers include:&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;Autocomplete&lt;/li&gt;
-&lt;li&gt;Compilation errors signaled on the fly&lt;/li&gt;
-&lt;li&gt;In-line reminders for task tracking (TO DOs)&lt;/li&gt;
-&lt;li&gt;Customizable code and project templates&lt;/li&gt;
-&lt;li&gt;Dedicated wizards to generate getters and setters, override functions, or help with UVM factory registration&lt;/li&gt;
-&lt;li&gt;Hyperlinks that help navigate faster in the source code&lt;/li&gt;
-&lt;li&gt;Semantic search&lt;/li&gt;
-&lt;li&gt;Refactoring&lt;/li&gt;
-&lt;li&gt;Macro expansion&lt;/li&gt;
-&lt;li&gt;Class and structural browsing&lt;/li&gt;
-&lt;li&gt;Trace port connections&lt;/li&gt;
-&lt;li&gt;UML diagrams for inspecting and documenting the architecture&lt;/li&gt;
-&lt;li&gt;Module flow diagrams for inspecting and documenting a module structure&lt;/li&gt;
-&lt;li&gt;Automated documentation extraction&lt;/li&gt;
-&lt;li&gt;UVM support and compliance checking&lt;/li&gt;
-&lt;li&gt;Cross-language capabilities for mixed-language projects&lt;/li&gt;
-&lt;li&gt;Vi and emacs emulation&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt; &lt;/p&gt;
-&lt;p&gt;INTEGRATION WITH OTHER TOOLS Since it is built on the Eclipse Platform, the DVT IDE can be easily integrated within a large plug-in ecosystem. It also integrates seamlessly with all major hardware simulators such as NCSim , Specman , VCS , and Questa, to enable simplified simulation analysis and debugging. In addition, it works with revision control systems like CVS, Git, Subversion, ClearCase and bug tracking systems such as Bugzilla and ClearQuest.&lt;br /&gt;
-RESOURCES &lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.dvteclipse.com/Design_and_Verification_Tools_Eclipse_IDE.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;DVT web page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.dvteclipse.com/datasheet/AMIQ_DVT_Datasheet.pdf&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;DVT datasheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/user/dvteclipse&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Demo movies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.dvteclipse.com/UVM_Support_in_DVT_Eclipse.html&quot; rel=&quot;nofollow&quot;&gt;UVM Support in DVT&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.dvteclipse.com/DVT_Debugger_Add-On_Module.html&quot; rel=&quot;nofollow&quot;&gt;DVT Debugger Module&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/design-and-verification-tools-dvt-ide-e-systemverilog-and-vhdl&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;Design and Verification Tools (DVT) IDE for e, SystemVerilog, and VHDL&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/design-and-verification-tools-dvt-ide-e-systemverilog-and-vhdl&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/design-and-verification-tools-dvt-ide-e-systemverilog-and-vhdl&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/design-and-verification-tools-dvt-ide-e-systemverilog-and-vhdl&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Wed, 19 Apr 2006 12:00:18 +0000</pubDate>
- <dc:creator>emisingname6ia</dc:creator>
- <guid isPermaLink="false">192 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/design-and-verification-tools-dvt-ide-e-systemverilog-and-vhdl#comments</comments>
+    <title>WireframeSketcher Wireframing Tool</title>
+    <link>http://marketplace.eclipse.org/content/wireframesketcher-wireframing-tool</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/sketch_80.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-05-10 07:46&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22WireframeSketcher%22&quot;&gt;WireframeSketcher&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2008-11-03 09:15&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/pseverinqw0/listings&quot; title=&quot;Peter Severin&quot;&gt;Peter Severin&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;WireframeSketcher is a rapid wireframing tool that helps quickly create wireframes, mockups and prototypes for desktop, web and mobile applications. It comes both as a plug-in for any Eclipse IDE and a standalone version. With WireframeSketcher users can quickly gather useful feedback from stakeholders, show off their proposals to clients, share their ideas with fellow developers and in the end build better software. Install the 14 days free trial and test it for yourself.&lt;/p&gt;
+&lt;h3&gt;Some of the top features:&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Extensive library of built-in controls for any type of UI. Stencils for Android, iPhone, iPad apps and more are available.&lt;/li&gt;
+&lt;li&gt;Hand-drawn look for wireframes. Your stakeholders won&#039;t be distracted by little details and you can focus on what’s important. Clean look is also available.&lt;/li&gt;
+&lt;li&gt;Create interactive prototypes. Present your prototypes in full-screen mode and click-through to show how the application or website is supposed work. Export your prototypes to clickable, high-quality PDF, or easily share them online in a few clicks.&lt;/li&gt;
+&lt;li&gt;More than 200 wireframing icons. Icons come in vector format, work at any size, can be colored, rotated, and embedded in any text.&lt;/li&gt;
+&lt;li&gt;Use components to create your own reusable bits. Easy inheritance mechanism lets you modify component&#039;s instance without breaking the link to its origin.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Download standalone version from our website: &lt;a href=&quot;http://wireframesketcher.com/download.html&quot; rel=&quot;nofollow&quot;&gt;http://wireframesketcher.com/download.html&lt;/a&gt;. &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Mon, 03 Nov 2008 14:15:53 +0000</pubDate>
+ <dc:creator>pseverinqw0</dc:creator>
+ <guid isPermaLink="false">801 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/wireframesketcher-wireframing-tool#comments</comments>
   </item>
   <item>
-    <title>Code Dx Eclipse</title>
-    <link>http://marketplace.eclipse.org/content/code-dx-eclipse</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/cdx-eclipse.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/ademartini/listings&quot; title=&quot;Robert Ferris&quot;&gt;Robert Ferris&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2015-01-08 15:23&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Code%20Dx%22&quot;&gt;Code Dx&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2018-05-04 10:13&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;Code Dx (&lt;a href=&quot;https://codedx.com/&quot; rel=&quot;nofollow&quot;&gt;https://codedx.com/&lt;/a&gt;) is an application vulnerability correlation and management system. This Eclipse plugin provides an integration with Code Dx.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/code-dx-eclipse&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;Code Dx Eclipse&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/code-dx-eclipse&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/code-dx-eclipse&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/code-dx-eclipse&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Thu, 08 Jan 2015 20:23:37 +0000</pubDate>
- <dc:creator>ademartini</dc:creator>
- <guid isPermaLink="false">2129662 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/code-dx-eclipse#comments</comments>
+    <title>Asciidoctor Editor</title>
+    <link>http://marketplace.eclipse.org/content/asciidoctor-editor</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/asciidoctor-editor-logo_0.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2018-05-09 18:58&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Albert%20Tregnaghi%22&quot;&gt;Albert Tregnaghi&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-03-15 15:51&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/atregnaghi/listings&quot; title=&quot;Albert Tregnaghi&quot;&gt;Albert Tregnaghi&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;h2&gt;Asciidoctor Editor&lt;/h2&gt;
+&lt;p&gt;This eclipse plugin is a text editor for asciidoc files.&lt;/p&gt;
+&lt;h3&gt;Features&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Fast html preview&lt;/li&gt;
+&lt;li&gt;Supports text based diagram generation&lt;br /&gt;
+	( &lt;a href=&quot;https://github.com/stathissideris/ditaa&quot; rel=&quot;nofollow&quot;&gt;ditaa&lt;/a&gt;, &lt;a href=&quot;https://plantuml.com/&quot; rel=&quot;nofollow&quot;&gt; plantuml&lt;/a&gt; and &lt;a href=&quot;https://www.graphviz.org/&quot; rel=&quot;nofollow&quot;&gt;graphviz&lt;/a&gt; )&lt;/li&gt;
+&lt;li&gt;3 different preview modes:
+&lt;ul&gt;&lt;li&gt;Inline preview with editor
+&lt;ul&gt;&lt;li&gt;Vertical splitted&lt;/li&gt;
+&lt;li&gt;Horizontal splitted&lt;/li&gt;
+&lt;li&gt;Both variantes are immediately updated on text save&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;External preview
+&lt;ul&gt;&lt;li&gt;Using external Browser&lt;/li&gt;
+&lt;li&gt;Update per autorefresh in browser
+&lt;ul&gt;&lt;li&gt;time configurable&lt;/li&gt;
+&lt;li&gt;can be turned off also&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Interesting when having multiple monitors and wanting to have full sized text document and preview&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Outline and Quickoutline
+&lt;ul&gt;&lt;li&gt;Headlines&lt;/li&gt;
+&lt;li&gt;Includes (double click opens file)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Syntax highlighting in Text Editor
+&lt;ul&gt;&lt;li&gt;Colors can be customized.&lt;/li&gt;
+&lt;li&gt;Also additional defaults for dark theme exists.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Tooltips&lt;/li&gt;
+&lt;li&gt;Hyperlinking of include parts (CTRL+Mouse)&lt;/li&gt;
+&lt;li&gt;Convenient toolbar actions
+&lt;ul&gt;&lt;li&gt;Table wizard&lt;/li&gt;
+&lt;li&gt;Code block templates&lt;/li&gt;
+&lt;li&gt;Possibility to toggle TOC on/off in output view&lt;/li&gt;
+&lt;li&gt;Switch preview layout variant&lt;/li&gt;
+&lt;li&gt;Jump to top of preview (internal preview panel only)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Links related to the plugin&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/de-jcup/eclipse-asciidoctor-editor/issues&quot; rel=&quot;nofollow&quot;&gt;Issue Tracker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/de-jcup/eclipse-asciidoctor-editor/releases&quot; rel=&quot;nofollow&quot;&gt;Release history&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/de-jcup/eclipse-asciidoctor-editor/wiki&quot; rel=&quot;nofollow&quot;&gt;Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PLaBYAz_I_8tFByQ7EWnemjZgx7q-quDyp&quot; rel=&quot;nofollow&quot;&gt;YouTube Video playlist&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Additional links&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://asciidoctor.org/docs/asciidoc-syntax-quick-reference&quot; rel=&quot;nofollow&quot;&gt;Asciidoctor Quickreference&lt;/a&gt; for details about syntax&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/stathissideris/ditaa&quot; rel=&quot;nofollow&quot;&gt;ditaa&lt;/a&gt;on github&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://plantuml.com/&quot; rel=&quot;nofollow&quot;&gt;plantuml&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.graphviz.org/&quot; rel=&quot;nofollow&quot;&gt;graphviz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;Technical details&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;It uses internally asciidoctorj 1.5.6 and jruby to provide a WYSWYG integration.&lt;/li&gt;
+&lt;li&gt;When using plantuml (or graphviz itself) you must ensure you have installed graphviz on your machine&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Thu, 15 Mar 2018 19:51:28 +0000</pubDate>
+ <dc:creator>atregnaghi</dc:creator>
+ <guid isPermaLink="false">3976500 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/asciidoctor-editor#comments</comments>
   </item>
   <item>
-    <title>jSparrow - Automatical Java Code Improvement</title>
-    <link>http://marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/jSparrow_Fluegel_110x80.jpg&quot; width=&quot;110&quot; height=&quot;77&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/mprehofer/listings&quot; title=&quot;Michaela Prehofer&quot;&gt;Michaela Prehofer&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Tue, 2017-06-20 11:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Splendit%20IT-Consulting%20GmbH%22&quot;&gt;Splendit IT-Consulting GmbH&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2018-05-04 05:53&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;&lt;strong&gt;Reliable code management&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;jSparrow &lt;/strong&gt;is an automated Eclipse PlugIn, which finds and replaces different kinds of threats in Java sources with a rule based approach. It improves your Java code and &lt;strong&gt;transforms &lt;/strong&gt;it to Java 7/8.&lt;/p&gt;
-&lt;p&gt;
-jSparrow has a set of &lt;strong&gt;45 rules &lt;/strong&gt;now, which are grouped into seven categories (see rule matrix in our screenshots) and sets a standard logging:&lt;br /&gt;
-    • String manipulation&lt;br /&gt;
-    • Formatting&lt;br /&gt;
-    • Coding Convention&lt;br /&gt;
-    • Performance&lt;br /&gt;
-    • Readability&lt;br /&gt;
-    • Old language constructs&lt;br /&gt;
-    • Lambda&lt;br /&gt;
-    • Logging&lt;/p&gt;
-&lt;p&gt;
-&lt;strong&gt;Removal &lt;/strong&gt;of potential &lt;strong&gt;bugs and code smells&lt;/strong&gt; is one of the main purposes of jSparrow. jSparrow is very efficient in disposing of these threats with its rules. You can group the profiles into individual &lt;strong&gt;rule profiles&lt;/strong&gt;, which also can be &lt;strong&gt;exported &lt;/strong&gt;and &lt;strong&gt;imported &lt;/strong&gt;to share them within your development team.&lt;/p&gt;
-&lt;p&gt;
-Being up to date with the latest Java standards is requiring a lot of software maintenance work. &lt;strong&gt;jSparrow upgrades &lt;/strong&gt;old code-artifacts to new state-of-the-art programming practices. The usage of jSparrow´s &lt;strong&gt;full version&lt;/strong&gt; allows you to save a lot of valuable time, while offering the option of &lt;strong&gt;automatically upgrading&lt;/strong&gt; to the latest version of Java within minutes in a safe way.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;jSparrow &lt;/strong&gt;improved his Preview Wizard and the Summary Page. It now &lt;strong&gt;estimates &lt;/strong&gt;the&lt;strong&gt; time to fix issues&lt;/strong&gt; manually. The preview wizard shows the number of issues fixed and estimates your &lt;strong&gt;saved time&lt;/strong&gt;. (see screenshots or our release notes: &lt;a href=&quot;https://jsparrow.eu/changelog/&quot; rel=&quot;nofollow&quot;&gt;https://jsparrow.eu/changelog/&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Once you installed jSparrow in your Eclipse – you will SAVE TIME&amp;amp; MONEY in modernizing your Java sources.&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;LATEST VERSION:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;jSparrow Release 2.4.5&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;OUR RELEASE POLICY IS AS FOLLOWS:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Two major releases&lt;/strong&gt; per year&lt;/p&gt;
-&lt;p&gt;    21st June – Midsummer Release&lt;br /&gt;
-    21st December – Release of the longest night&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Monthly Rule releases&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If we developed new rules, they will be released on the 21st of each month - (if the 21st isn’t an Austrian working day- the release will be postponed one month)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Weekly Bugfix &lt;/strong&gt;releases&lt;/p&gt;
-&lt;p&gt;Bugfixes will be released each Tuesday&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Hotfix Releases &lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Hotfix Releases can be deployed any time (hopefully not necessary)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;jSparrow - Automatical Java Code Improvement&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Tue, 20 Jun 2017 15:34:11 +0000</pubDate>
- <dc:creator>mprehofer</dc:creator>
- <guid isPermaLink="false">3503691 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/jsparrow-automatical-java-code-improvement#comments</comments>
+    <title>CodeMix</title>
+    <link>http://marketplace.eclipse.org/content/codemix</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/codemix-icon.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2018-05-09 14:04&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2018-04-02 15:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;With &lt;a href=&quot;https://www.genuitec.com/products/codemix/&quot; rel=&quot;nofollow&quot;&gt;CodeMix&lt;/a&gt;, unlock a wide array of technologies from Visual Studio Code and add-on extensions built for Code OSS directly inside your Eclipse IDE.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;First class JavaScript coding &amp;amp; debugging&lt;/li&gt;
+&lt;li&gt;Vastly improved HTML and CSS editing&lt;/li&gt;
+&lt;li&gt;New languages including TypeScript, PHP and Python&lt;/li&gt;
+&lt;li&gt;New frameworks from React and Vue.js to Angular&lt;/li&gt;
+&lt;li&gt;New UX patterns like the Quick Open shortcuts&lt;/li&gt;
+&lt;li&gt;As-you-type content assist&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;a href=&quot;https://www.genuitec.com/products/codemix/&quot; rel=&quot;nofollow&quot;&gt;See all the features of CodeMix&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CodeMix can be installed on top of leading Eclipse solutions from MyEclipse to Spring Tools Suite. CodeMix is also compatible with popular plugins like PDT and PyDev.&lt;/p&gt;
+&lt;p&gt;Already using MyEclipse, Webclipse or Angular IDE from Genuitec? You get CodeMix &lt;a href=&quot;https://www.genuitec.com/products/codemix/faq-existing-customers/&quot; rel=&quot;nofollow&quot;&gt;included in your current license&lt;/a&gt;. Simply install it on top.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Mon, 02 Apr 2018 19:34:28 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">4008412 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/codemix#comments</comments>
   </item>
   <item>
-    <title>AccuRate Solution</title>
-    <link>http://marketplace.eclipse.org/content/accurate-solution</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/AccuRate-01_0.png&quot; width=&quot;78&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/sanojs/listings&quot; title=&quot;Sanoj S&quot;&gt;Sanoj S&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Mon, 2018-04-02 23:38&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22RapidValue%20IT%20Services%20Pvt%20Ltd%22&quot;&gt;RapidValue IT Services Pvt Ltd&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-05-03 23:15&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;&lt;strong&gt;AccuRate &lt;/strong&gt;by &lt;strong&gt;RapidValue&lt;/strong&gt; is a one-stop solution for test automation across various mobile platforms (iOS, Android, Mobile Web) and desktop browsers, in real-time. It provides rich features for test execution, test control and test management with data-driven and keyword-driven testing capabilities.&lt;/p&gt;
-&lt;p&gt;It includes 400+ pre-built functions for mobile and web automation leveraging open source tools like Appium, Selenium and Protractor.&lt;/p&gt;
-&lt;p&gt;AccuRate works on iOS, Android and Web and gives a human readable report, while reporting for the number of bugs, what buys etc. It gives you the scope of error logging i.e., it identifies the position of the error so that the developers can fix it. AccuRate encounters the scenarios which other testing tools are not able to figure out and also, provides much ease of maintenance over UI changes.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/accurate-solution&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;AccuRate Solution&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/accurate-solution&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/accurate-solution&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/accurate-solution&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Tue, 03 Apr 2018 03:38:08 +0000</pubDate>
- <dc:creator>sanojs</dc:creator>
- <guid isPermaLink="false">4008970 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/accurate-solution#comments</comments>
+    <title>React :: CodeMix</title>
+    <link>http://marketplace.eclipse.org/content/react-codemix</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/react-hexagon.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2018-05-09 14:02&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2018-04-21 12:06&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;The React pack for &lt;a href=&quot;https://www.genuitec.com/products/codemix/&quot; rel=&quot;nofollow&quot;&gt;CodeMix&lt;/a&gt; brings the best extensions for React coding from VS Code directly into Eclipse. From smarter editing to integrated debugging, CodeMix with React can work seamlessly with your existing IDE.&lt;/p&gt;
+&lt;p&gt;Key pack extensions delivered along with CodeMix:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/Microsoft/vscode-react-native&quot; rel=&quot;nofollow&quot;&gt;React Native extension by Microsoft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/xabikos/vscode-react&quot; rel=&quot;nofollow&quot;&gt;React Snippets by Charalampos Karypidis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Microsoft/vscode-chrome-debug&quot; rel=&quot;nofollow&quot;&gt;Chrome Debugging extension by Microsoft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ChristianKohler/PathIntellisense&quot; rel=&quot;nofollow&quot;&gt;Path Intellisense extension by Christian Kohler&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Sat, 21 Apr 2018 16:06:02 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">4043160 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/react-codemix#comments</comments>
   </item>
   <item>
-    <title>IBM WebSphere Application Server Migration Toolkit</title>
-    <link>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/wdt-was-lp-500_10.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/dabosheasha5ix/listings&quot; title=&quot;Dalia Abo Sheasha&quot;&gt;Dalia Abo Sheasha&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2012-06-08 06:36&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22IBM%22&quot;&gt;IBM&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-05-03 09:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;The IBM® WebSphere® Application Server Migration Toolkit is a suite of tools and knowledge collections that enables your organization to quickly and cost-effectively migrate to WAS Liberty and WebSphere Application Server V8, V8.5.5 or V9, whether from a previous version of WebSphere Application Server or competitive application servers including Apache Tomcat Server, JBoss Application Server, Oracle Application Server, and Oracle® WebLogic Server. It features cloud migration rules for running your application on Liberty for Java on IBM Bluemix and other third-party PaaS environments such as Cloud Foundry. This Eclipse Marketplace solution combines all our Eclipse-based migration tools in one easy installation. The WebSphere Version to Version Application Migration Tool enables organizations deploying to Liberty or traditional WebSphere Application Server to more easily migrate applications from WebSphere Application Server V5.1 and later. Upgrading to a more recent version of WebSphere Application Server is of course less time-consuming than migrating from another application server, given that IBM has made significant investments in upward compatibility, configuration, and management process upgrades, as well as API preservation and consistency between versions. However, in some cases, applications must be changed in order to support or exploit new levels of industry standard specifications delivered with new versions of WebSphere Application Server. Go to &lt;a href=&quot;https://developer.ibm.com/wasdev/downloads/#filter/sortby=relevance;q=migration&quot; rel=&quot;nofollow&quot;&gt;WASdev&lt;/a&gt; to download archives for all the migration tools.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;IBM WebSphere Application Server Migration Toolkit&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Fri, 08 Jun 2012 10:36:47 +0000</pubDate>
- <dc:creator>dabosheasha5ix</dc:creator>
- <guid isPermaLink="false">292930 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit#comments</comments>
+    <title>Vue.js :: CodeMix</title>
+    <link>http://marketplace.eclipse.org/content/vuejs-codemix</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/logo_0.png&quot; width=&quot;110&quot; height=&quot;79&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2018-05-09 14:01&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2018-04-21 11:21&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;The Vue.js pack for &lt;a href=&quot;https://www.genuitec.com/products/codemix/&quot; rel=&quot;nofollow&quot;&gt;CodeMix&lt;/a&gt; brings the best extensions for Vue.js coding from VS Code directly into Eclipse. From smarter editing to integrated debugging, CodeMix with Vue.js can work seamlessly with your existing IDE.&lt;/p&gt;
+&lt;p&gt;Key pack extensions delivered along with CodeMix:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/vuejs/vetur&quot; rel=&quot;nofollow&quot;&gt;Vue.js extension by the Vue.js team&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Microsoft/vscode-chrome-debug&quot; rel=&quot;nofollow&quot;&gt;Chrome Debugging extension by Microsoft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ChristianKohler/PathIntellisense&quot; rel=&quot;nofollow&quot;&gt;Path Intellisense extension by Christian Kohler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/formulahendry/vscode-code-runner&quot; rel=&quot;nofollow&quot;&gt;CodeRunner extension by Jun Han&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Sat, 21 Apr 2018 15:21:24 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">4043127 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/vuejs-codemix#comments</comments>
   </item>
   <item>
-    <title>IBM WebSphere Application Server Migration Toolkit - WAS Liberty </title>
-    <link>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/wdt-was-lp-500_8.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/dabosheasha5ix/listings&quot; title=&quot;Dalia Abo Sheasha&quot;&gt;Dalia Abo Sheasha&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2014-06-13 10:07&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22IBM%22&quot;&gt;IBM&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-05-03 09:34&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;The IBM® WebSphere Application Server Migration Toolkit helps you move traditional WebSphere Application Server applications to Liberty, which can be running inside or outside of the cloud. The migration toolkit scans your application source code and highlights Java EE programming model and WebSphere API differences between the servers. It offers advice and potential solutions to assess the ease of moving applications to Liberty. It also informs you about any implementation differences that could affect your applications. Where possible, it provides quick fixes to make the application changes for you. When moving an application to the IBM Bluemix or other Cloud Foundry environment, the Cloud Migration Tool offers additional advice and best practices for your applications. For example, it will warn about using the Java File I/O API for storing persistent information on the local file system or suggest using the IBM Bluemix SessionCache service for storing HTTP session data. Also provided is a reporting tool that quickly scans your application and generates a visual report that shows which editions of WebSphere Application Server are best suited for the application. The report is an inventory of Java EE programming models that are used by the application. It indicates whether the application can be supported by WebSphere Application Server full profile or Liberty profile. Learn more through our &lt;a href=&quot;http://www.youtube.com/watch?v=9jQX1k_thKI&amp;amp;feature=youtu.be&quot; rel=&quot;nofollow&quot;&gt;youtube video.&lt;/a&gt; Go to &lt;a href=&quot;https://developer.ibm.com/wasdev/downloads/#filter/sortby=relevance;q=migration&quot; rel=&quot;nofollow&quot;&gt;WASdev&lt;/a&gt; to download archives for all the migration tools including a command line binary scanner.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;IBM WebSphere Application Server Migration Toolkit - WAS Liberty &quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Fri, 13 Jun 2014 14:07:05 +0000</pubDate>
- <dc:creator>dabosheasha5ix</dc:creator>
- <guid isPermaLink="false">1744378 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-was-liberty#comments</comments>
+    <title>PHP :: CodeMix</title>
+    <link>http://marketplace.eclipse.org/content/php-codemix</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/2000px-PHP-logo.svg_.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2018-05-09 14:01&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2018-04-21 10:20&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;The PHP pack for &lt;a href=&quot;https://www.genuitec.com/products/codemix/&quot; rel=&quot;nofollow&quot;&gt;CodeMix&lt;/a&gt; brings the best extensions for PHP from VS Code directly into Eclipse. From smarter editing to integrated debugging, CodeMix with PHP can work seamlessly with your existing IDE including with PDT.&lt;/p&gt;
+&lt;p&gt;Key pack extensions delivered along with CodeMix:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/felixfbecker/vscode-php-intellisense&quot; rel=&quot;nofollow&quot;&gt;PHP Intellisense extension by Felix Becker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/felixfbecker/vscode-php-debug&quot; rel=&quot;nofollow&quot;&gt;PHP Debug extension by Felix Becker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ChristianKohler/PathIntellisense&quot; rel=&quot;nofollow&quot;&gt;Path Intellisense extension by Christian Kohler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/formulahendry/vscode-code-runner&quot; rel=&quot;nofollow&quot;&gt;CodeRunner extension by Jun Han&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Sat, 21 Apr 2018 14:20:49 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">4043068 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/php-codemix#comments</comments>
   </item>
   <item>
-    <title>IBM WebSphere Application Server Migration Toolkit - Competitive Tools</title>
-    <link>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools</link>
-    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/wdt-was-lp-500_9.png&quot; width=&quot;80&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/dabosheasha5ix/listings&quot; title=&quot;Dalia Abo Sheasha&quot;&gt;Dalia Abo Sheasha&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Fri, 2014-06-13 11:49&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22IBM%22&quot;&gt;IBM&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Thu, 2018-05-03 09:33&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_start --&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;The IBM® WebSphere® Application Server Migration Toolkit is a suite of tools and knowledge collections that enables your organization to quickly and cost-effectively migrate to Liberty and traditional WebSphere Application Server V8, V8.5.5, or V9. This specific Eclipse Marketplace solution includes migration tools for migration from competitive application servers including: Apache Tomcat Server, JBoss Application Server, Oracle Application Server, or Oracle® WebLogic Server. Learn more through a free multimedia educational module, &lt;a href=&quot;http://publib.boulder.ibm.com/infocenter/ieduasst/v1r1m0/topic/com.ibm.iea.wasmt/wasmt/3.5/Overview.html&quot; rel=&quot;nofollow&quot;&gt;IBM Education Assistant.&lt;/a&gt; This release includes application migration tools for all application servers mentioned above as well as the version to version migration tools. The application migration tools use the scanning capabilities of Rational Software Analyzer to locate application elements that should be updated in order to ensure optimal compatibility and performance with WebSphere Application Server V8 through V9, as well as unique editing features to review and appropriately change the code with the developer in complete control. They focus on migration issues when moving applications from third-party application servers to WebSphere Application Server. This includes scanning for many proprietary items such as Java APIs, Deployment descriptor config in extensions files, MBeans, annotations, etc. See the &lt;a href=&quot;https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wamt/MigrationToolkitCompetitive/MigrationToolkit_en_US_Competitive.pdf&quot; rel=&quot;nofollow&quot;&gt;product documentation&lt;/a&gt; for a complete list. Rules to migrate applications from previous versions of Java SE and between vendor implementations is also included. Best practices are provided when Spring or Hibernate frameworks are found within applications to ensure successful deployment on WebSphere Application Server. The Apache Tomcat configuration migration tool helps move Tomcat config to WebSphere Liberty. This provides an integrated developer experience for migrating both configuration and applications from Apache Tomcat to WebSphere Liberty profile. Go to &lt;a href=&quot;https://developer.ibm.com/wasdev/downloads/#filter/sortby=relevance;q=migration&quot; rel=&quot;nofollow&quot;&gt;WASdev&lt;/a&gt; to download archives for all the migration tools including the command-line binary scanning tool.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;!-- google_ad_section_end --&gt;&lt;div class=&quot;easy_social_box clearfix vertical easy_social_lang_und&quot;&gt;
-            &lt;div class=&quot;easy_social-widget easy_social-widget-twitter first&quot;&gt;&lt;a href=&quot;http://twitter.com/share&quot; class=&quot;twitter-share-button&quot;
-data-url=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools&quot;
-data-count=&quot;vertical&quot;
-data-lang = &quot;en&quot;
-data-via=&quot;&quot;
-data-related=&quot;:Check it out!&quot;
-data-text=&quot;IBM WebSphere Application Server Migration Toolkit - Competitive Tools&quot;&gt;Tweet&lt;/a&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-facebook&quot;&gt;&lt;iframe src=&quot;//www.facebook.com/plugins/like.php?locale=en_US&amp;amp;href=http%3A//marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools&amp;amp;send=false&amp;amp;layout=box_count&amp;amp;width=48&amp;amp;show_faces=true&amp;amp;action=like&amp;amp;colorscheme=light&amp;amp;font=&amp;amp;height=90&amp;amp;appId=&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; style=&quot;border:none; overflow:hidden; width:48px; height:90px;&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-googleplus&quot;&gt;&lt;div class=&quot;g-plusone&quot; data-size=&quot;tall&quot; data-annotation=&quot;bubble&quot; data-href=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;div class=&quot;easy_social-widget easy_social-widget-linkedin last&quot;&gt;&lt;script type=&quot;in/share&quot; data-url=&quot;http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools&quot; data-counter=&quot;top&quot;&gt;&lt;/script&gt;&lt;/div&gt;
-  &lt;/div&gt; &lt;!-- /.easy_social_box --&gt;</description>
-     <pubDate>Fri, 13 Jun 2014 15:49:09 +0000</pubDate>
- <dc:creator>dabosheasha5ix</dc:creator>
- <guid isPermaLink="false">1744576 at http://marketplace.eclipse.org</guid>
- <comments>http://marketplace.eclipse.org/content/ibm-websphere-application-server-migration-toolkit-competitive-tools#comments</comments>
+    <title>Python :: CodeMix</title>
+    <link>http://marketplace.eclipse.org/content/python-codemix</link>
+    <description>&lt;div class=&quot;field field-name-field-resource-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;img typeof=&quot;foaf:Image&quot; class=&quot;img-responsive&quot; src=&quot;http://marketplace.eclipse.org/sites/default/files/5848152fcef1014c0b5e4967.png&quot; width=&quot;110&quot; height=&quot;80&quot; alt=&quot;&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-date-updated field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Updated:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Wed, 2018-05-09 14:01&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;a href=&quot;/search/content/%22Genuitec%2C%20LLC%22&quot;&gt;Genuitec, LLC&lt;/a&gt;&lt;div class=&quot;field field-name-shared-date-created field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Date Created:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;Sat, 2018-04-21 09:56&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-shared-submitted-by field-type-text field-label-inline clearfix&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Submitted by:&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;/user/twebbcke/listings&quot; title=&quot;Tim Webb&quot;&gt;Tim Webb&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;The Python pack for &lt;a href=&quot;https://www.genuitec.com/products/codemix/&quot; rel=&quot;nofollow&quot;&gt;CodeMix&lt;/a&gt; brings the best extensions for Python from VS Code directly into Eclipse. From smarter editing to integrated debugging, CodeMix with Python can work seamlessly with your existing IDE including with PyDev.&lt;/p&gt;
+&lt;p&gt;Key pack extensions delivered along with CodeMix:&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/Microsoft/vscode-python&quot; rel=&quot;nofollow&quot;&gt;Python extension by Microsoft&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ChristianKohler/PathIntellisense&quot; rel=&quot;nofollow&quot;&gt;Path Intellisense extension by Christian Kohler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/formulahendry/vscode-code-runner&quot; rel=&quot;nofollow&quot;&gt;CodeRunner extension by Jun Han&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+     <pubDate>Sat, 21 Apr 2018 13:56:53 +0000</pubDate>
+ <dc:creator>twebbcke</dc:creator>
+ <guid isPermaLink="false">4043040 at http://marketplace.eclipse.org</guid>
+ <comments>http://marketplace.eclipse.org/content/python-codemix#comments</comments>
   </item>
   </channel>
 </rss>
