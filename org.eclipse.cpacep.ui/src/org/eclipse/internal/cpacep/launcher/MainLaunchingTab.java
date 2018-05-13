@@ -7,11 +7,18 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.internal.ui.SWTFactory;
 import org.eclipse.debug.ui.AbstractLaunchConfigurationTab;
+import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.widgets.*;
+import org.eclipse.ui.dialogs.CheckedTreeSelectionDialog;
+import org.eclipse.ui.model.BaseWorkbenchContentProvider;
+import org.eclipse.ui.model.WorkbenchLabelProvider;
 
 public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 
@@ -68,7 +75,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	executableButton = createPushButton(tempBrowseLayout, Messages.MainLaunchingTab_labelBrowse, null);
 	executableButton.addSelectionListener(new SelectionAdapter() {
 	    public void widgetSelected(SelectionEvent e) {
-		// sourceFile Button Action here
+		CPACExecutableButtonSelected();
 	    }
 	});
 
@@ -107,14 +114,14 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	configurationCombo.setText(Messages.MainLaunchingTab_configurationCombo);
 	addAutoCompleteFeature(specificationCombo);
 	addAutoCompleteFeature(configurationCombo);
-	
+
 	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCommandLineArgs);
 	commandLineText = new Text(comp, SWT.SINGLE | SWT.BORDER);
 	gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
 	gridData.horizontalSpan = 2;
 	commandLineText.setLayoutData(gridData);
 	commandLineText.addModifyListener(modifyListener);
-	
+
     }
 
     @Override
@@ -143,57 +150,71 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	// TODO Auto-generated method stub
 	return Messages.MainLaunchingTab_name;
     }
-    
-    public static void addAutoCompleteFeature(Combo combo)
-    {
-        // Add a key listener
-        combo.addKeyListener(new KeyAdapter()
-        {
-            public void keyReleased(KeyEvent keyEvent)
-            {
-                Combo cmb = ((Combo) keyEvent.getSource());
-                setClosestMatch(cmb);
-            }
 
-            // Move the highlight back by one character for backspace
-            public void keyPressed(KeyEvent keyEvent)
-            {
-                if (keyEvent.keyCode == SWT.BS)
-                {
-                    Combo cmb = ((Combo) keyEvent.getSource());
-                    Point pt = cmb.getSelection();
-                    cmb.setSelection(new Point(Math.max(0, pt.x - 1), pt.y));
-                }
-            }
+    private void CPACExecutableButtonSelected() {
+	FileDialog dialog = new FileDialog(getShell(), SWT.OPEN);
+	dialog.setText(Messages.MainLaunchingTab_dialogCPA);
+	dialog.setFilterNames(new String[] { "cpa*" }); //$NON-NLS-1$
+	String file = dialog.open();
+	if (file != null) {
+	    executableText.setText(file);
+	}
+    }
 
-            private void setClosestMatch(Combo combo)
-            {
-                String str = combo.getText();
-                String[] cItems = combo.getItems();
-                // Find Item in Combo Items. If full match returns index
-                int index = -1;
-                for (int i = 0; i < cItems.length; i++)
-                {
-                    if (cItems[i].toLowerCase().startsWith(str.toLowerCase()))
-                    {
-                        index = i;
-                        break;
-                    }
-                }
+    void sourcesButtonSelected() {
+	CheckedTreeSelectionDialog dialog = new CheckedTreeSelectionDialog(getShell(), new WorkbenchLabelProvider(),
+		new BaseWorkbenchContentProvider());
+	dialog.setContainerMode(true);
+	dialog.setTitle(Messages.MainLaunchingTab_dialogSourcesTitle);
+	dialog.setMessage(Messages.MainLaunchingTab_dialogSourcesMessage);
+	dialog.setInput(ResourcesPlugin.getWorkspace().getRoot());
 
-                if (index != -1)
-                {
-                    Point pt = combo.getSelection();
-                    combo.select(index);
-                    combo.setText(cItems[index]);
-                    combo.setSelection(new Point(pt.x, cItems[index].length()));
-                }
-                else
-                {
-                    combo.setText("");
-                }
-            }
-        });
+    }
+
+    /**
+     * 
+     * @param combo
+     *            Function to auto complete the combo box
+     */
+    public static void addAutoCompleteFeature(Combo combo) {
+	// Add a key listener
+	combo.addKeyListener(new KeyAdapter() {
+	    public void keyReleased(KeyEvent keyEvent) {
+		Combo cmb = ((Combo) keyEvent.getSource());
+		setClosestMatch(cmb);
+	    }
+
+	    // Move the highlight back by one character for backspace
+	    public void keyPressed(KeyEvent keyEvent) {
+		if (keyEvent.keyCode == SWT.BS) {
+		    Combo cmb = ((Combo) keyEvent.getSource());
+		    Point pt = cmb.getSelection();
+		    cmb.setSelection(new Point(Math.max(0, pt.x - 1), pt.y));
+		}
+	    }
+
+	    private void setClosestMatch(Combo combo) {
+		String str = combo.getText();
+		String[] cItems = combo.getItems();
+		// Find Item in Combo Items. If full match returns index
+		int index = -1;
+		for (int i = 0; i < cItems.length; i++) {
+		    if (cItems[i].toLowerCase().startsWith(str.toLowerCase())) {
+			index = i;
+			break;
+		    }
+		}
+
+		if (index != -1) {
+		    Point pt = combo.getSelection();
+		    combo.select(index);
+		    combo.setText(cItems[index]);
+		    combo.setSelection(new Point(pt.x, cItems[index].length()));
+		} else {
+		    combo.setText("");
+		}
+	    }
+	});
     }
 
 }

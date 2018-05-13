@@ -16,6 +16,10 @@ public class Messages extends NLS {
 	public static String MainLaunchingTab_configurationCombo;
 	public static String MainLaunchingTab_labelProgramArgs;
 	public static String MainLaunchingTab_labelCommandLineArgs;
+	public static String MainLaunchingTab_dialogCPA;
+	
+	public static String MainLaunchingTab_dialogSourcesTitle;
+	public static String MainLaunchingTab_dialogSourcesMessage;
 	
 	static {
 		// initialize resource bundle
