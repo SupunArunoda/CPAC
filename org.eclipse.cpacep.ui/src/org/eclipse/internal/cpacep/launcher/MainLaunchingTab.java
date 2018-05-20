@@ -38,6 +38,18 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     };
 
     @Override
+    public boolean canSave() {
+	return true;
+    }
+
+    @Override
+    public boolean isValid(ILaunchConfiguration launchConfig) {
+	setMessage(null);
+	setErrorMessage(null);
+	return true;
+    }
+
+    @Override
     public void createControl(Composite parent) {
 	// TODO Auto-generated method stub
 	updateLaunchConfigurationDialog();
@@ -102,7 +114,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	sourceFileButton = createPushButton(tempButtonLayout, Messages.MainLaunchingTab_sourcesBrowse, null);
 	sourceFileButton.addSelectionListener(new SelectionAdapter() {
 	    public void widgetSelected(SelectionEvent e) {
-		// sourceFile Button Action here
+		sourcesButtonSelected();
 	    }
 	});
 	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
@@ -162,12 +174,13 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     }
 
     void sourcesButtonSelected() {
-	CheckedTreeSelectionDialog dialog = new CheckedTreeSelectionDialog(getShell(), new WorkbenchLabelProvider(),
-		new BaseWorkbenchContentProvider());
-	dialog.setContainerMode(true);
-	dialog.setTitle(Messages.MainLaunchingTab_dialogSourcesTitle);
-	dialog.setMessage(Messages.MainLaunchingTab_dialogSourcesMessage);
-	dialog.setInput(ResourcesPlugin.getWorkspace().getRoot());
+	FileDialog dialog = new FileDialog(getShell(), SWT.OPEN);
+	dialog.setText(Messages.MainLaunchingTab_dialogSourcesMessage);
+	dialog.setFilterNames(new String[] { "*.c" }); //$NON-NLS-1$
+	String file = dialog.open();
+	if (file != null) {
+	    sourceText.setText(file);
+	}
 
     }
 
