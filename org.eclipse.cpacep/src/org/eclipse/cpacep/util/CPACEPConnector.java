@@ -14,9 +14,9 @@ public class CPACEPConnector {
 
 	public static final String NO_VALUE = ""; //$NON-NLS-1$
 	public static final String LC_CPACEP_SOURCE = "cpacep.source"; //$NON-NLS-1$
-	public static final String LC_CPACEP_CMD = "cbmc.cmd"; //$NON-NLS-1$
-	public static final String LC_CPACEP_SPECIFICATION = "cbmc.spec"; //$NON-NLS-1$
-	public static final String LC_CPACEP_CONFIGURATION = "cbmc.config"; //$NON-NLS-1$
+	public static final String LC_CPACEP_CMD = "cpacep.cmd"; //$NON-NLS-1$
+	public static final String LC_CPACEP_SPECIFICATION = "cpacep.spec"; //$NON-NLS-1$
+	public static final String LC_CPACEP_CONFIGURATION = "cpacep.config"; //$NON-NLS-1$
 
 	public static final String LC_CPACEP_EXECUTABLE = "cpacep.executable"; //$NON-NLS-1$
 
