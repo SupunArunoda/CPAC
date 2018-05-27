@@ -6,7 +6,6 @@ import java.nio.file.*;
 import java.nio.file.attribute.FileAttribute;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import org.apache.commons.io.FileUtils;
 
 public class FileHandler {
 
@@ -25,12 +24,8 @@ public class FileHandler {
 	}
 
 	public static void deleteDirectory(File file) {
-		try {
-			FileUtils.deleteDirectory(file);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+		file.delete();
 	}
 
 	public static void copyFolder(File sourceFolder, File destinationFolder) throws IOException {

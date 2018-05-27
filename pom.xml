@@ -8,17 +8,9 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	 <dependencies>
-	  <dependency>
-	    <groupId>commons-io</groupId>
-	    <artifactId>commons-io</artifactId>
-	    <version>2.6</version>
-	  </dependency>
-	  </dependencies>
-
 	<modules>
-		<module>org.eclipse.cpacep.ui</module>
 		<module>org.eclipse.cpacep</module>
+		<module>org.eclipse.cpacep.ui</module>
 		<module>org.eclipse.cpacep.feature</module>
 		<module>org.eclipse.cpacep.targetplatform</module>
 	</modules>
