@@ -9,6 +9,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.cpacep.util.CPACEPConnector;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.internal.ui.SWTFactory;
@@ -29,6 +31,9 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Combo specificationCombo;
     private Combo configurationCombo;
     private Text commandLineText;
+    private String workingDirectory;
+    
+    private boolean isMkdir;
 
     ModifyListener modifyListener = new ModifyListener() {
 	@Override
@@ -139,21 +144,56 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     @Override
     public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
 	// TODO Auto-generated method stub
-	System.out.println("Inside set defaults");
 
     }
 
     @Override
     public void initializeFrom(ILaunchConfiguration configuration) {
 	// TODO Auto-generated method stub
-	System.out.println("Inside initializing form");
-
+	try {
+	    executableText.setText(
+		    configuration.getAttribute(CPACEPConnector.LC_CPACEP_EXECUTABLE, CPACEPConnector.NO_VALUE));
+	    sourceText.setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_SOURCE, CPACEPConnector.NO_VALUE));
+	    specificationCombo.setText(
+		    configuration.getAttribute(CPACEPConnector.LC_CPACEP_SPECIFICATION, CPACEPConnector.NO_VALUE));
+	    configurationCombo.setText(
+		    configuration.getAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION, CPACEPConnector.NO_VALUE));
+	    commandLineText
+		    .setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_CMD, CPACEPConnector.NO_VALUE));
+	    String checkMkdir=configuration.getAttribute(CPACEPConnector.LC_CPACEP_MKDIR, CPACEPConnector.NO_VALUE);
+	    if(checkMkdir.equals("Y")){
+		isMkdir=false;
+	    }
+	} catch (CoreException e) {
+	    // TODO: handle exception
+	    e.printStackTrace();
+	}
     }
 
     @Override
     public void performApply(ILaunchConfigurationWorkingCopy configuration) {
 	// TODO Auto-generated method stub
-	System.out.println("Inside perform apply");
+
+	if (isDirty()) {
+	    String exec = executableText.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_EXECUTABLE,
+		    exec.toString().length() == 0 ? null : exec);
+	    String src = sourceText.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_SOURCE, src.toString().length() == 0 ? null : src);
+	    String spec = specificationCombo.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_SPECIFICATION,
+		    spec.toString().length() == 0 ? null : spec);
+	    String conf = configurationCombo.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION,
+		    conf.toString().length() == 0 ? null : conf);
+	    String cmd = commandLineText.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD, cmd.toString().length() == 0 ? null : cmd);
+	    if(isMkdir) {
+		configuration.setAttribute(CPACEPConnector.LC_CPACEP_MKDIR, "Y");
+	    }else {
+		configuration.setAttribute(CPACEPConnector.LC_CPACEP_MKDIR, "N");
+	    }
+	}
 
     }
 
@@ -169,7 +209,13 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	dialog.setFilterNames(new String[] { "cpa*" }); //$NON-NLS-1$
 	String file = dialog.open();
 	if (file != null) {
+	    if(!executableText.getText().equals(file)) {
+		isMkdir=true;
+	    }else {
+		isMkdir=false;
+	    }
 	    executableText.setText(file);
+
 	}
     }
 
