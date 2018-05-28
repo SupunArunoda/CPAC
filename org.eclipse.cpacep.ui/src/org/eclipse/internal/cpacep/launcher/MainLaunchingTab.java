@@ -7,10 +7,16 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.cpacep.util.CPACEPConnector;
+import org.eclipse.cpacep.util.FileHandler;
+import org.eclipse.cpacep.util.StringHandler;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.internal.ui.SWTFactory;
@@ -31,8 +37,10 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Combo specificationCombo;
     private Combo configurationCombo;
     private Text commandLineText;
-    private String workingDirectory;
-    
+    private String isComboEnable;
+
+    private ArrayList<String> specificationData;
+    private ArrayList<String> configurationData;
 
     ModifyListener modifyListener = new ModifyListener() {
 	@Override
@@ -122,14 +130,13 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	    }
 	});
 	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
-	String dummySpecification[] = { "ErrorLabel", "JavaAssertion", "TerminatingFunctions" };
-	String dummyConfiguration[] = { "defuse", "policy-intervals", "invariantGeneration" };
+
+	String dummySpecification[] = { Messages.MainLaunchingTab_specificationCombo };
+	String dummyConfiguration[] = { Messages.MainLaunchingTab_configurationCombo };
 	specificationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, dummySpecification);
 	configurationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, dummyConfiguration);
-	specificationCombo.setText(Messages.MainLaunchingTab_specificationCombo);
-	configurationCombo.setText(Messages.MainLaunchingTab_configurationCombo);
-	addAutoCompleteFeature(specificationCombo);
-	addAutoCompleteFeature(configurationCombo);
+	specificationCombo.setEnabled(false);
+	configurationCombo.setEnabled(false);
 
 	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCommandLineArgs);
 	commandLineText = new Text(comp, SWT.SINGLE | SWT.BORDER);
@@ -159,6 +166,11 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    configuration.getAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION, CPACEPConnector.NO_VALUE));
 	    commandLineText
 		    .setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_CMD, CPACEPConnector.NO_VALUE));
+	    isComboEnable = configuration.getAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO,
+		    CPACEPConnector.NO_VALUE);
+	    if (isComboEnable.equals("Y")) {
+		updateComboBox();
+	    }
 	} catch (CoreException e) {
 	    // TODO: handle exception
 	    e.printStackTrace();
@@ -183,6 +195,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    conf.toString().length() == 0 ? null : conf);
 	    String cmd = commandLineText.getText().trim();
 	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD, cmd.toString().length() == 0 ? null : cmd);
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, isComboEnable);
 	}
 
     }
@@ -200,7 +213,44 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	String file = dialog.open();
 	if (file != null) {
 	    executableText.setText(file);
+	    updateComboBox();
+	}
+    }
 
+    private void updateComboBox() {
+	String homeDir = StringHandler.getHomePath(executableText.getText().trim(), CPACEPConnector.CPA_HOME_PATH);
+	try {
+	    specificationData = FileHandler.fileMathcher("glob:**/*.spc", homeDir + "/config/specification");
+	    configurationData = FileHandler.fileMathcher("glob:**/*.properties", homeDir + "/config");
+
+	    if (specificationData != null) {
+		specificationCombo.setEnabled(true);
+
+		for (String spec : specificationData) {
+		    specificationCombo.add(spec);
+		}
+	    }
+	    if (configurationData != null) {
+		configurationCombo.setEnabled(true);
+
+		for (String conf : configurationData) {
+		    configurationCombo.add(conf);
+		}
+	    }
+	    if (!isComboEnable.equals("Y")) {
+		specificationCombo.setText(Messages.MainLaunchingTab_specificationCombo);
+		configurationCombo.setText(Messages.MainLaunchingTab_configurationCombo);
+	    }
+	    if (configurationCombo.getEnabled() && specificationCombo.getEnabled()) {
+		isComboEnable = "Y";
+	    } else {
+		isComboEnable = "N";
+	    }
+	    addAutoCompleteFeature(specificationCombo);
+	    addAutoCompleteFeature(configurationCombo);
+	} catch (IOException e) {
+	    // TODO: handle exception
+	    e.printStackTrace();
 	}
     }
 

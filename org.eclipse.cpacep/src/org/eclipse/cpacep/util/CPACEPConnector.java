@@ -15,6 +15,7 @@ public class CPACEPConnector {
 
 	public static final String LC_CPACEP_EXECUTABLE = "cpacep.executable"; //$NON-NLS-1$
 	public static final String LC_CPACEP_MKDIR = "cpacep.mkdir";
+	public static final String LC_CPACEP_ENABLE_COMBO = "cpacep.e";
 
 	public static final String SPEC_FILE_TYPE = ".spc";
 	public static final String CONFIG_FILE_TYPE = ".properties";
@@ -53,14 +54,7 @@ public class CPACEPConnector {
 	}
 
 	public void setCPACheckerHome() {
-		String homeSplit[] = lcCPACEPExecutable.split("/");
-		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < homeSplit.length - CPA_HOME_PATH; i++) {
-			if (!homeSplit[i].equals("")) {
-				sb.append("/" + homeSplit[i]);
-			}
-		}
-		CPACheckerHome = sb.toString();
+		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable, CPA_HOME_PATH);
 	}
 
 	public void setOutputDirectory() throws IOException {
@@ -74,6 +68,7 @@ public class CPACEPConnector {
 		baseCli.add(" -config " + CPACheckerHome + "/config/" + lcConfiguration + CONFIG_FILE_TYPE);
 		baseCli.add(lcCommandLine);
 		baseCli.add(lcSourceFile);
+		baseCli.add(" -stats");
 	}
 
 	private String executeCommand(String command) {
