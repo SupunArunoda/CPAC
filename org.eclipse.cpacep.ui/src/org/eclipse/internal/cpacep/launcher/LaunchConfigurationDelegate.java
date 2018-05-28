@@ -6,7 +6,6 @@ import org.eclipse.cpacep.util.CPACEPConnector;
 import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
-import org.eclipse.internal.cpacep.view.CpacepView;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
@@ -21,7 +20,7 @@ public class LaunchConfigurationDelegate extends org.eclipse.debug.core.model.La
 	    @Override
 	    public void run() {
 		IWorkbenchPage page = null;
-		CpacepView view = null;
+		//CpacepView view = null;
 //		try {
 
 //		    view = (CpacepView) page.findView(CpacepView.ID);

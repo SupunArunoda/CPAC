@@ -33,7 +33,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Text commandLineText;
     private String workingDirectory;
     
-    private boolean isMkdir;
 
     ModifyListener modifyListener = new ModifyListener() {
 	@Override
@@ -160,10 +159,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    configuration.getAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION, CPACEPConnector.NO_VALUE));
 	    commandLineText
 		    .setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_CMD, CPACEPConnector.NO_VALUE));
-	    String checkMkdir=configuration.getAttribute(CPACEPConnector.LC_CPACEP_MKDIR, CPACEPConnector.NO_VALUE);
-	    if(checkMkdir.equals("Y")){
-		isMkdir=false;
-	    }
 	} catch (CoreException e) {
 	    // TODO: handle exception
 	    e.printStackTrace();
@@ -188,11 +183,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    conf.toString().length() == 0 ? null : conf);
 	    String cmd = commandLineText.getText().trim();
 	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD, cmd.toString().length() == 0 ? null : cmd);
-	    if(isMkdir) {
-		configuration.setAttribute(CPACEPConnector.LC_CPACEP_MKDIR, "Y");
-	    }else {
-		configuration.setAttribute(CPACEPConnector.LC_CPACEP_MKDIR, "N");
-	    }
 	}
 
     }
@@ -209,11 +199,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	dialog.setFilterNames(new String[] { "cpa*" }); //$NON-NLS-1$
 	String file = dialog.open();
 	if (file != null) {
-	    if(!executableText.getText().equals(file)) {
-		isMkdir=true;
-	    }else {
-		isMkdir=false;
-	    }
 	    executableText.setText(file);
 
 	}

@@ -24,24 +24,24 @@ public class FileHandler {
 	}
 
 	public static void deleteDirectory(File file) {
-
+		File[] contents = file.listFiles();
+		if (contents != null) {
+			for (File f : contents) {
+				deleteDirectory(f);
+			}
+		}
 		file.delete();
 	}
 
 	public static void copyFolder(File sourceFolder, File destinationFolder) throws IOException {
-		//		Check if sourceFolder is a directory or file
-		//		If sourceFolder is file; then copy the file directly to new location
 		if (sourceFolder.isDirectory()) {
-			//Verify if destinationFolder is already present; If not then create it
 			if (!destinationFolder.exists()) {
 				destinationFolder.mkdir();
 				System.out.println("Directory created :: " + destinationFolder);
 			}
 
-			//Get all files from source directory
 			String files[] = sourceFolder.list();
 
-			//Iterate over all files and copy them to destinationFolder one by one
 			for (String file : files) {
 				File srcFile = new File(sourceFolder, file);
 				File destFile = new File(destinationFolder, file);
@@ -50,10 +50,19 @@ public class FileHandler {
 				copyFolder(srcFile, destFile);
 			}
 		} else {
-			//Copy the file content from one place to another
 			Files.copy(sourceFolder.toPath(), destinationFolder.toPath(), StandardCopyOption.REPLACE_EXISTING);
 			System.out.println("File copied :: " + destinationFolder);
 		}
-		//FileUtils.copyDirectory(sourceFolder, destinationFolder);
+	}
+
+	public static void cleanTempDirectory() {
+		File[] directories = new File("/tmp/").listFiles(File::isDirectory);
+		if (directories != null) {
+			for (File file : directories) {
+				if (file.getName().contains("cpacep")) {
+					deleteDirectory(file);
+				}
+			}
+		}
 	}
 }
