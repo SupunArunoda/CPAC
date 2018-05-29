@@ -1,7 +1,8 @@
 package org.eclipse.cpacep.util;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import org.eclipse.debug.core.ILaunchConfiguration;
 
 public class CPACEPConnector {
@@ -15,7 +16,6 @@ public class CPACEPConnector {
 
 	public static final String LC_CPACEP_MKDIR = "cpacep.mkdir";
 	public static final String LC_CPACEP_ENABLE_COMBO = "cpacep.enablecombo";
-	public static final String LC_CPACEP_OUTPUT_DIR = "cpacep.output";
 	public static final String SPEC_FILE_TYPE = ".spc";
 	public static final String CONFIG_FILE_TYPE = ".properties";
 
@@ -34,8 +34,6 @@ public class CPACEPConnector {
 	private String lcConfiguration;
 
 	private String CPACheckerHome;
-	public static String configName;
-	public static Map<String, String> configNameOutputMap = new HashMap<>();
 
 	public CPACEPConnector(ILaunchConfiguration config) {
 
@@ -46,6 +44,7 @@ public class CPACEPConnector {
 			lcSpecification = config.getAttribute(LC_CPACEP_SPECIFICATION, NO_VALUE);
 			lcConfiguration = config.getAttribute(LC_CPACEP_CONFIGURATION, NO_VALUE);
 			setCPACheckerHome();
+			setOutputDirectory();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -58,13 +57,7 @@ public class CPACEPConnector {
 	}
 
 	public void setOutputDirectory() throws IOException {
-		String outputPath = configNameOutputMap.get(configName);
-		if (outputPath.equals("")) {
-			outputDirectory = FileHandler.createTempDirectory();
-			configNameOutputMap.put(configName, outputDirectory.getPath());
-		} else {
-			outputDirectory = new File(outputPath);
-		}
+		outputDirectory = FileHandler.createTempDirectory();
 	}
 
 	private void initializeBaseCommandLine() {

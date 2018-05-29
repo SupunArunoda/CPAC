@@ -196,14 +196,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	    String cmd = commandLineText.getText().trim();
 	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD, cmd.toString().length() == 0 ? null : cmd);
 	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, true);
-	    String outputPath = CPACEPConnector.configNameOutputMap.get(configuration.getName());
-	    if (outputPath == null || outputPath.equals("")) {
-		CPACEPConnector.configNameOutputMap.put(configuration.getName(), "");
-		configuration.setAttribute(CPACEPConnector.LC_CPACEP_OUTPUT_DIR, CPACEPConnector.configNameOutputMap);
-	    } else {
-		CPACEPConnector.configNameOutputMap.put(configuration.getName(), outputPath);
-		configuration.setAttribute(CPACEPConnector.LC_CPACEP_OUTPUT_DIR, CPACEPConnector.configNameOutputMap);
-	    }
 	}
 
     }
