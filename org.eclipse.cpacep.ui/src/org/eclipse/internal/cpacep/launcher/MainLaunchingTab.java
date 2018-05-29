@@ -37,7 +37,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Combo specificationCombo;
     private Combo configurationCombo;
     private Text commandLineText;
-    private boolean isComboEnable;
+    private String isComboEnable;
 
     private ArrayList<String> specificationData;
     private ArrayList<String> configurationData;
@@ -45,9 +45,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     ModifyListener modifyListener = new ModifyListener() {
 	@Override
 	public void modifyText(ModifyEvent e) {
-	    if(executableText!=null) {
-		updateComboBox();
-	    }
 	    scheduleUpdateJob();
 	}
     };
@@ -169,8 +166,9 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    configuration.getAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION, CPACEPConnector.NO_VALUE));
 	    commandLineText
 		    .setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_CMD, CPACEPConnector.NO_VALUE));
-	    isComboEnable = configuration.getAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, false);
-	    if (isComboEnable) {
+	    isComboEnable = configuration.getAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO,
+		    CPACEPConnector.NO_VALUE);
+	    if (isComboEnable.equals("Y")) {
 		updateComboBox();
 	    }
 	} catch (CoreException e) {
@@ -197,16 +195,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    conf.toString().length() == 0 ? null : conf);
 	    String cmd = commandLineText.getText().trim();
 	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD, cmd.toString().length() == 0 ? null : cmd);
-	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, true);
-	    String outputPath = CPACEPConnector.configNameOutputMap.get(configuration.getName());
-	    if (outputPath == null || outputPath.equals("")) {
-		CPACEPConnector.configNameOutputMap.put(configuration.getName(), "");
-		configuration.setAttribute(CPACEPConnector.LC_CPACEP_OUTPUT_DIR, CPACEPConnector.configNameOutputMap);
-	    } else {
-		CPACEPConnector.configNameOutputMap.put(configuration.getName(), outputPath);
-		configuration.setAttribute(CPACEPConnector.LC_CPACEP_OUTPUT_DIR, CPACEPConnector.configNameOutputMap);
-	    }
-
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, isComboEnable);
 	}
 
     }
@@ -224,6 +213,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	String file = dialog.open();
 	if (file != null) {
 	    executableText.setText(file);
+	    updateComboBox();
 	}
     }
 
@@ -247,14 +237,14 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    configurationCombo.add(conf);
 		}
 	    }
-	    if (!isComboEnable) {
+	    if (!isComboEnable.equals("Y")) {
 		specificationCombo.setText(Messages.MainLaunchingTab_specificationCombo);
 		configurationCombo.setText(Messages.MainLaunchingTab_configurationCombo);
 	    }
 	    if (configurationCombo.getEnabled() && specificationCombo.getEnabled()) {
-		isComboEnable = true;
+		isComboEnable = "Y";
 	    } else {
-		isComboEnable = false;
+		isComboEnable = "N";
 	    }
 	    addAutoCompleteFeature(specificationCombo);
 	    addAutoCompleteFeature(configurationCombo);
