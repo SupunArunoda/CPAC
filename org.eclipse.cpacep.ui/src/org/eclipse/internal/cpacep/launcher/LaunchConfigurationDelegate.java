@@ -15,7 +15,6 @@ public class LaunchConfigurationDelegate extends org.eclipse.debug.core.model.La
     public void launch(final ILaunchConfiguration configuration, String mode, final ILaunch launch,
 	    IProgressMonitor monitor) {
 
-	System.out.println("Inside launch Configuration");
 	Display.getDefault().asyncExec(new Runnable() {
 	    @Override
 	    public void run() {

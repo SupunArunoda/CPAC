@@ -1,8 +1,7 @@
 package org.eclipse.cpacep.util;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import org.eclipse.debug.core.ILaunchConfiguration;
 
 public class CPACEPConnector {
@@ -12,11 +11,11 @@ public class CPACEPConnector {
 	public static final String LC_CPACEP_CMD = "cpacep.cmd"; //$NON-NLS-1$
 	public static final String LC_CPACEP_SPECIFICATION = "cpacep.spec"; //$NON-NLS-1$
 	public static final String LC_CPACEP_CONFIGURATION = "cpacep.config"; //$NON-NLS-1$
-
 	public static final String LC_CPACEP_EXECUTABLE = "cpacep.executable"; //$NON-NLS-1$
-	public static final String LC_CPACEP_MKDIR = "cpacep.mkdir";
-	public static final String LC_CPACEP_ENABLE_COMBO = "cpacep.e";
 
+	public static final String LC_CPACEP_MKDIR = "cpacep.mkdir";
+	public static final String LC_CPACEP_ENABLE_COMBO = "cpacep.enablecombo";
+	public static final String LC_CPACEP_OUTPUT_DIR = "cpacep.output";
 	public static final String SPEC_FILE_TYPE = ".spc";
 	public static final String CONFIG_FILE_TYPE = ".properties";
 
@@ -35,9 +34,10 @@ public class CPACEPConnector {
 	private String lcConfiguration;
 
 	private String CPACheckerHome;
+	public static String configName;
+	public static Map<String, String> configNameOutputMap = new HashMap<>();
 
 	public CPACEPConnector(ILaunchConfiguration config) {
-		FileHandler.cleanTempDirectory();
 
 		try {
 			lcCPACEPExecutable = config.getAttribute(LC_CPACEP_EXECUTABLE, NO_VALUE);
@@ -49,7 +49,7 @@ public class CPACEPConnector {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			//			logger.log(new Status(IStatus.ERROR, PLUGIN_ID, "Error retrieving attributes from the launch configuration", e)); //$NON-NLS-1$
+			//logger.log(new Status(IStatus.ERROR, PLUGIN_ID, "Error retrieving attributes from the launch configuration", e)); //$NON-NLS-1$
 		}
 	}
 
@@ -58,8 +58,13 @@ public class CPACEPConnector {
 	}
 
 	public void setOutputDirectory() throws IOException {
-		outputDirectory = FileHandler.createTempDirectory();
-		FileHandler.copyFolder(new File(CPACheckerHome + "/output"), outputDirectory);
+		String outputPath = configNameOutputMap.get(configName);
+		if (outputPath.equals("")) {
+			outputDirectory = FileHandler.createTempDirectory();
+			configNameOutputMap.put(configName, outputDirectory.getPath());
+		} else {
+			outputDirectory = new File(outputPath);
+		}
 	}
 
 	private void initializeBaseCommandLine() {
@@ -68,6 +73,7 @@ public class CPACEPConnector {
 		baseCli.add(" -config " + CPACheckerHome + "/config/" + lcConfiguration + CONFIG_FILE_TYPE);
 		baseCli.add(lcCommandLine);
 		baseCli.add(lcSourceFile);
+		baseCli.add(" -outputpath " + outputDirectory);
 		baseCli.add(" -stats");
 	}
 
@@ -83,7 +89,6 @@ public class CPACEPConnector {
 			while ((line = reader.readLine()) != null) {
 				output.append(line + "\n");
 			}
-			setOutputDirectory();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
