@@ -34,6 +34,7 @@ public class CPACEPConnector {
 	private String lcConfiguration;
 
 	private String CPACheckerHome;
+	private String result;
 
 	public CPACEPConnector(ILaunchConfiguration config) {
 
@@ -96,8 +97,8 @@ public class CPACEPConnector {
 				sb.append(command + " "); //$NON-NLS-1$
 			}
 		}
-		String out = executeCommand(sb.toString());
-		System.out.println(out);
+		result = executeCommand(sb.toString());
+		System.out.println(result);
 
 	}
 
@@ -106,6 +107,14 @@ public class CPACEPConnector {
 		bridge.initializeBaseCommandLine();
 		bridge.fillInLaunch();
 		return bridge;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
 	}
 
 }
