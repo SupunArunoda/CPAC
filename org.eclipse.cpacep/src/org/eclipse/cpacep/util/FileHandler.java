@@ -6,8 +6,7 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileAttribute;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
 
 public class FileHandler {
 
@@ -93,6 +92,7 @@ public class FileHandler {
 				return FileVisitResult.CONTINUE;
 			}
 		});
+		Collections.sort(matchedList);
 		return matchedList;
 	}
 }
