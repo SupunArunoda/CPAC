@@ -78,6 +78,7 @@ public class FileHandler {
 			public FileVisitResult visitFile(Path path, BasicFileAttributes attrs) throws IOException {
 				if (pathMatcher.matches(path)) {
 					String tempPath = path.toString().replaceAll(location + "/", "");
+
 					if (glob.contains(CPACEPConnector.SPEC_FILE_TYPE)) {
 						matchedList.add(tempPath.replaceAll(CPACEPConnector.SPEC_FILE_TYPE, ""));
 					} else if (glob.contains(CPACEPConnector.CONFIG_FILE_TYPE)) {

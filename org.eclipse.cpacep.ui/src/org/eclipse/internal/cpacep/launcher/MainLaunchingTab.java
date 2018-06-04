@@ -38,6 +38,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Combo configurationCombo;
     private Text commandLineText;
     private boolean isComboEnable;
+    private boolean isUpdateComboData;
 
     private ArrayList<String> specificationData;
     private ArrayList<String> configurationData;
@@ -217,37 +218,40 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     }
 
     private void updateComboBox() {
-	String homeDir = StringHandler.getHomePath(executableText.getText().trim(), CPACEPConnector.CPA_HOME_PATH);
-	try {
-	    specificationData = FileHandler.fileMathcher("glob:**/*.spc", homeDir + "/config/specification");
-	    configurationData = FileHandler.fileMathcher("glob:**/*.properties", homeDir + "/config");
+	if (!isUpdateComboData) {
+	    String homeDir = StringHandler.getHomePath(executableText.getText().trim(), CPACEPConnector.CPA_HOME_PATH);
+	    try {
+		specificationData = FileHandler.fileMathcher("glob:**/*.spc", homeDir + "/config/specification");
+		configurationData = FileHandler.fileMathcher("glob:**/*.properties", homeDir + "/config");
 
-	    if (specificationData != null) {
-		specificationCombo.setEnabled(true);
+		if (specificationData != null) {
+		    specificationCombo.setEnabled(true);
 
-		for (String spec : specificationData) {
-		    specificationCombo.add(spec);
+		    for (String spec : specificationData) {
+			specificationCombo.add(spec);
+		    }
 		}
-	    }
-	    if (configurationData != null) {
-		configurationCombo.setEnabled(true);
+		if (configurationData != null) {
+		    configurationCombo.setEnabled(true);
 
-		for (String conf : configurationData) {
-		    configurationCombo.add(conf);
+		    for (String conf : configurationData) {
+			configurationCombo.add(conf);
+		    }
 		}
-	    }
 
-	    if (configurationCombo.getEnabled() && specificationCombo.getEnabled()) {
-		isComboEnable = true;
-	    } else {
-		isComboEnable = false;
-	    }
+		if (configurationCombo.getEnabled() && specificationCombo.getEnabled()) {
+		    isComboEnable = true;
+		} else {
+		    isComboEnable = false;
+		}
 
-//	    addAutoCompleteFeature(specificationCombo);
-//	    addAutoCompleteFeature(configurationCombo);
-	} catch (IOException e) {
-	    // TODO: handle exception
-	    e.printStackTrace();
+		// addAutoCompleteFeature(specificationCombo);
+		// addAutoCompleteFeature(configurationCombo);
+	    } catch (IOException e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	    }
+	    isUpdateComboData=true;
 	}
     }
 
