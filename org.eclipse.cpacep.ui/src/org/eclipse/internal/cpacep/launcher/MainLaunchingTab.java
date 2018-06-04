@@ -113,7 +113,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	gridData.horizontalSpan = 2;
 	sourceText.setLayoutData(gridData);
 	sourceText.setFont(font);
-	sourceText.addModifyListener(modifyListener);
 
 	Composite tempButtonLayout = new Composite(comp, SWT.NONE);
 	gridData = new GridData(GridData.FILL_HORIZONTAL);
@@ -145,8 +144,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
 	gridData.horizontalSpan = 2;
 	commandLineText.setLayoutData(gridData);
-	commandLineText.addModifyListener(modifyListener);
-
     }
 
     @Override
