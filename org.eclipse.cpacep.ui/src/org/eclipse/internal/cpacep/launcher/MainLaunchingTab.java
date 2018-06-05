@@ -39,6 +39,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Text commandLineText;
     private boolean isComboEnable;
     private boolean isUpdateComboData;
+    private String dummySpace="                                                          ";
 
     private ArrayList<String> specificationData;
     private ArrayList<String> configurationData;
@@ -132,8 +133,32 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		sourcesButtonSelected();
 	    }
 	});
-	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
+	
+	Composite specLabelLayout = new Composite(comp, SWT.NONE);
+	gridData = new GridData(GridData.FILL_HORIZONTAL);
+	gridData.horizontalSpan = 4;
+	specLabelLayout.setLayoutData(gridData);
 
+	GridLayout spcLableGrid = new GridLayout(3, true);
+	spcLableGrid.numColumns=2;
+	spcLableGrid.marginHeight = spcLableGrid.marginWidth = 0;
+	specLabelLayout.setLayout(spcLableGrid);
+
+	//new Label(specLabelLayout, SWT.NONE).setLayoutData(new GridData(SWT.END, SWT.CENTER, false, false));
+	Label spcLabel = new Label(specLabelLayout, SWT.NONE);
+	spcLabel.setText("Specification");
+	GridData specGridData=new GridData();
+	specGridData.horizontalIndent=194;
+	spcLabel.setLayoutData(specGridData);
+	
+	Label confLabel = new Label(specLabelLayout, SWT.NONE);
+	confLabel.setText("Configuration");
+	GridData confGridData=new GridData();
+	confGridData.horizontalIndent=187;
+	confLabel.setLayoutData(confGridData);
+	
+	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
+	
 	specificationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
 	configurationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
 	specificationCombo.setEnabled(false);
