@@ -13,7 +13,7 @@ public class FileHandler {
 		return Files.createTempDirectory("cpacep").toFile();
 	}
 
-	public static ArrayList<String> fileMathcher(String glob, String location) throws IOException {
+	public static ArrayList<String> fileMatcher(String glob, String location) throws IOException {
 		ArrayList<String> matchedList = new ArrayList<String>();
 		final PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher(glob);
 

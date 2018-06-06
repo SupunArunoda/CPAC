@@ -243,8 +243,8 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	if (!isUpdateComboData) {
 	    String homeDir = StringHandler.getHomePath(executableText.getText().trim(), CPACEPConnector.CPA_HOME_PATH);
 	    try {
-		specificationData = FileHandler.fileMathcher("glob:**/*.spc", homeDir + "/config/specification");
-		configurationData = FileHandler.fileMathcher("glob:**/*.properties", homeDir + "/config");
+		specificationData = FileHandler.fileMatcher("glob:**/*.spc", homeDir + "/config/specification");
+		configurationData = FileHandler.fileMatcher("glob:**/*.properties", homeDir + "/config");
 
 		if (specificationData != null) {
 		    specificationCombo.setEnabled(true);
