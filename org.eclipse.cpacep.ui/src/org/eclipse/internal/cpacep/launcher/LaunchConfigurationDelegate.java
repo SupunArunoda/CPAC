@@ -28,6 +28,8 @@ public class LaunchConfigurationDelegate extends org.eclipse.debug.core.model.La
 		    if (view == null) {
 			view = (CpacepView) page.showView(CpacepView.ID, null,
 				IWorkbenchPage.VIEW_ACTIVATE);
+		    }else {
+			view.reset();
 		    }
 		    CPACEPConnector.create(configuration);
 

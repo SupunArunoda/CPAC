@@ -39,4 +39,8 @@ public class CpacepView extends ViewPart {
     public void setFocus() {
 	text.setFocus();
     }
+    
+    public void reset() {
+	text.setText("");
+    }
 }
