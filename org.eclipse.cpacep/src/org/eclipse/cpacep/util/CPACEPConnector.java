@@ -23,6 +23,7 @@ public class CPACEPConnector {
 	public static final int CPA_HOME_PATH = 2;
 
 	public static File outputDirectory;
+	public static String executorType;
 	private List<String> baseCli = new ArrayList<String>();
 	//	private static final String PLUGIN_ID = "org.eclipse.cpacep"; //$NON-NLS-1$
 	//
@@ -35,6 +36,16 @@ public class CPACEPConnector {
 
 	private String CPACheckerHome;
 	private String result;
+
+	static {
+		String osName = System.getProperty("os.name");
+		if (osName.equals("Linux")) {
+			executorType = "/scripts/cpa.sh";
+		} else if (osName.equals("Windows")) {
+			executorType = "/scripts/cpa.bat";
+		}
+
+	}
 
 	public CPACEPConnector(ILaunchConfiguration config) {
 
@@ -62,7 +73,7 @@ public class CPACEPConnector {
 	}
 
 	private void initializeBaseCommandLine() {
-		baseCli.add(CPACheckerHome + "/scripts/cpa.sh");
+		baseCli.add(CPACheckerHome + executorType);
 		baseCli.add(" -spec " + CPACheckerHome + "/config/specification/" + lcSpecification + SPEC_FILE_TYPE);
 		baseCli.add(" -config " + CPACheckerHome + "/config/" + lcConfiguration + CONFIG_FILE_TYPE);
 		baseCli.add(lcCommandLine);
