@@ -8,6 +8,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -244,9 +245,10 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	if (!isUpdateComboData) {
 	    String homeDir = StringHandler.getHomePath(executableText.getText().trim(), CPACEPConnector.CPA_HOME_PATH);
 	    try {
-		specificationData = FileHandler.fileMatcher("glob:**/*.spc", homeDir + "/config/specification");
-		configurationData = FileHandler.fileMatcher("glob:**/*.properties", homeDir + "/config");
-
+		specificationData = FileHandler.fileMatcher("glob:**" + File.separator + "*.spc",
+			homeDir + File.separator + "config" + File.separator + "specification");
+		configurationData = FileHandler.fileMatcher("glob:**" + File.separator + "*.properties",
+			homeDir + File.separator + "config");
 		if (specificationData != null) {
 		    specificationCombo.setEnabled(true);
 
