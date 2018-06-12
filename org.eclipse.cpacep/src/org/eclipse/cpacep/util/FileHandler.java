@@ -22,7 +22,7 @@ public class FileHandler {
 			@Override
 			public FileVisitResult visitFile(Path path, BasicFileAttributes attrs) throws IOException {
 				if (pathMatcher.matches(path)) {
-					String tempPath = (path.toString().replaceAll(location + "/", "")).toLowerCase();
+					String tempPath = (path.toString().replaceAll(location + "/", ""));
 
 					if (glob.contains(CPACEPConnector.SPEC_FILE_TYPE)) {
 						matchedList.add(tempPath.replaceAll(CPACEPConnector.SPEC_FILE_TYPE, ""));
@@ -38,7 +38,7 @@ public class FileHandler {
 				return FileVisitResult.CONTINUE;
 			}
 		});
-		Collections.sort(matchedList);
+		Collections.sort(matchedList, String.CASE_INSENSITIVE_ORDER);
 		return matchedList;
 	}
 }
