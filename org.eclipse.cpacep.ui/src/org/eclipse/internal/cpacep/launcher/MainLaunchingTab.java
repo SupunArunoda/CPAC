@@ -40,7 +40,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Text commandLineText;
     private boolean isComboEnable;
     private boolean isUpdateComboData;
-    private String dummySpace = "                                              ";
+    private String dummySpace = "                                                          ";
 
     private ArrayList<String> specificationData;
     private ArrayList<String> configurationData;
@@ -145,8 +145,8 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	spcLableGrid.marginHeight = spcLableGrid.marginWidth = 0;
 	specLabelLayout.setLayout(spcLableGrid);
 
-	// new Label(specLabelLayout, SWT.NONE).setLayoutData(new
-	// GridData(SWT.END, SWT.CENTER, false, false));
+	// new Label(specLabelLayout, SWT.NONE).setLayoutData(new GridData(SWT.END,
+	// SWT.CENTER, false, false));
 	Label spcLabel = new Label(specLabelLayout, SWT.NONE);
 	spcLabel.setText("Specification");
 	GridData specGridData = new GridData();
@@ -249,7 +249,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 			homeDir + File.separator + "config" + File.separator + "specification");
 		configurationData = FileHandler.fileMatcher("glob:**" + File.separator + "*.properties",
 			homeDir + File.separator + "config");
-
 		if (specificationData != null) {
 		    specificationCombo.setEnabled(true);
 
@@ -271,8 +270,8 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    isComboEnable = false;
 		}
 
-		// addAutoCompleteFeature(specificationCombo);
-		// addAutoCompleteFeature(configurationCombo);
+		addAutoCompleteFeature(specificationCombo);
+		addAutoCompleteFeature(configurationCombo);
 	    } catch (IOException e) {
 		// TODO: handle exception
 		e.printStackTrace();
@@ -295,7 +294,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     /**
      * 
      * @param combo
-     *            Function to auto complete the combo box
+     * Function to auto complete the combo box
      */
     public static void addAutoCompleteFeature(Combo combo) {
 	// Add a key listener

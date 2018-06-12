@@ -38,7 +38,7 @@ public class FileHandler {
 				return FileVisitResult.CONTINUE;
 			}
 		});
-		Collections.sort(matchedList);
+		Collections.sort(matchedList, String.CASE_INSENSITIVE_ORDER);
 		return matchedList;
 	}
 }
