@@ -23,7 +23,7 @@ public class FileHandler {
 			public FileVisitResult visitFile(Path path, BasicFileAttributes attrs) throws IOException {
 				Path fileName = path.getFileName();
 				if (pathMatcher.matches(fileName)) {
-					String tempPath = fileName.toString();
+					String tempPath = location.relativize(path).toString();
 
 					if (glob.contains(CPACEPConnector.SPEC_FILE_TYPE)) {
 						matchedList.add(tempPath.replace(CPACEPConnector.SPEC_FILE_TYPE, ""));
