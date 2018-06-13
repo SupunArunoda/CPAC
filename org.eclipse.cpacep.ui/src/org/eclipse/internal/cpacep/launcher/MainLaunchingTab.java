@@ -10,6 +10,8 @@ import org.eclipse.swt.layout.RowLayout;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.IResource;
@@ -242,13 +244,14 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     }
 
     private void updateComboBox() {
-	if (!isUpdateComboData) {
-	    String homeDir = StringHandler.getHomePath(executableText.getText().trim(), CPACEPConnector.CPA_HOME_PATH);
+	if (!isUpdateComboData && !executableText.getText().isEmpty()) {
+	    Path homeDir = StringHandler.getHomePath(executableText.getText().trim());
+	    Path configDir = homeDir.resolve("config");
 	    try {
-		specificationData = FileHandler.fileMatcher("glob:**" + File.separator + "*.spc",
-			homeDir + File.separator + "config" + File.separator + "specification");
-		configurationData = FileHandler.fileMatcher("glob:**" + File.separator + "*.properties",
-			homeDir + File.separator + "config");
+		specificationData = FileHandler.fileMatcher("glob:*.spc",
+			configDir.resolve("specification"));
+		configurationData = FileHandler.fileMatcher("glob:*.properties",
+			configDir);
 		if (specificationData != null) {
 		    specificationCombo.setEnabled(true);
 

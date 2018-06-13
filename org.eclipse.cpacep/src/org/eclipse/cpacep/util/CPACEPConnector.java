@@ -54,7 +54,7 @@ public class CPACEPConnector {
 	}
 
 	public void setCPACheckerHome() {
-		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable, CPA_HOME_PATH);
+		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable).toString();
 	}
 
 	public void setOutputDirectory() throws IOException {
