@@ -26,6 +26,14 @@
 			<layout>p2</layout>
 		</repository>
 	  </repositories>
+	
+         <dependencies>
+	   <dependency>
+	     <groupId>com.google.googlejavaformat</groupId>
+             <artifactId>google-java-format</artifactId>
+              <version>1.6</version>
+           </dependency>
+        </dependencies>
 
 	<build>
 		<defaultGoal>clean install</defaultGoal>
