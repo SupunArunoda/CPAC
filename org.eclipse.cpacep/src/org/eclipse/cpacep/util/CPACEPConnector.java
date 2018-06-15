@@ -54,7 +54,7 @@ public class CPACEPConnector {
 	}
 
 	public void setCPACheckerHome() {
-		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable, CPA_HOME_PATH);
+		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable).toString();
 	}
 
 	public void setOutputDirectory() throws IOException {
@@ -62,9 +62,9 @@ public class CPACEPConnector {
 	}
 
 	private void initializeBaseCommandLine() {
-		baseCli.add(CPACheckerHome + "/scripts/cpa.sh");
-		baseCli.add(" -spec " + CPACheckerHome + "/config/specification/" + lcSpecification + SPEC_FILE_TYPE);
-		baseCli.add(" -config " + CPACheckerHome + "/config/" + lcConfiguration + CONFIG_FILE_TYPE);
+		baseCli.add(lcCPACEPExecutable);
+		baseCli.add(" -spec " + CPACheckerHome + File.separator + "config" + File.separator + "specification" + File.separator + lcSpecification + SPEC_FILE_TYPE);
+		baseCli.add(" -config " + CPACheckerHome + File.separator + "config" + File.separator + lcConfiguration + CONFIG_FILE_TYPE);
 		baseCli.add(lcCommandLine);
 		baseCli.add(lcSourceFile);
 		baseCli.add(" -outputpath " + outputDirectory);

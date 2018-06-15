@@ -13,21 +13,22 @@ public class FileHandler {
 		return Files.createTempDirectory("cpacep").toFile();
 	}
 
-	public static ArrayList<String> fileMatcher(String glob, String location) throws IOException {
+	public static ArrayList<String> fileMatcher(String glob, Path location) throws IOException {
 		ArrayList<String> matchedList = new ArrayList<String>();
 		final PathMatcher pathMatcher = FileSystems.getDefault().getPathMatcher(glob);
 
-		Files.walkFileTree(Paths.get(location), new SimpleFileVisitor<Path>() {
+		Files.walkFileTree(location, new SimpleFileVisitor<Path>() {
 
 			@Override
 			public FileVisitResult visitFile(Path path, BasicFileAttributes attrs) throws IOException {
-				if (pathMatcher.matches(path)) {
-					String tempPath = (path.toString().replaceAll(location + "/", "")).toLowerCase();
+				Path fileName = path.getFileName();
+				if (pathMatcher.matches(fileName)) {
+					String tempPath = location.relativize(path).toString();
 
 					if (glob.contains(CPACEPConnector.SPEC_FILE_TYPE)) {
-						matchedList.add(tempPath.replaceAll(CPACEPConnector.SPEC_FILE_TYPE, ""));
+						matchedList.add(tempPath.replace(CPACEPConnector.SPEC_FILE_TYPE, ""));
 					} else if (glob.contains(CPACEPConnector.CONFIG_FILE_TYPE)) {
-						matchedList.add(tempPath.replaceAll(CPACEPConnector.CONFIG_FILE_TYPE, ""));
+						matchedList.add(tempPath.replace(CPACEPConnector.CONFIG_FILE_TYPE, ""));
 					}
 				}
 				return FileVisitResult.CONTINUE;
@@ -38,7 +39,7 @@ public class FileHandler {
 				return FileVisitResult.CONTINUE;
 			}
 		});
-		Collections.sort(matchedList);
+		Collections.sort(matchedList, String.CASE_INSENSITIVE_ORDER);
 		return matchedList;
 	}
 }

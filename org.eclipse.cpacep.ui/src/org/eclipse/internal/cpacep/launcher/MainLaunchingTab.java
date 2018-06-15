@@ -8,7 +8,10 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.IResource;
@@ -39,7 +42,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     private Text commandLineText;
     private boolean isComboEnable;
     private boolean isUpdateComboData;
-    private String dummySpace="                                                          ";
+    private String dummySpace = "                                                          ";
 
     private ArrayList<String> specificationData;
     private ArrayList<String> configurationData;
@@ -133,32 +136,33 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		sourcesButtonSelected();
 	    }
 	});
-	
+
 	Composite specLabelLayout = new Composite(comp, SWT.NONE);
 	gridData = new GridData(GridData.FILL_HORIZONTAL);
 	gridData.horizontalSpan = 4;
 	specLabelLayout.setLayoutData(gridData);
 
 	GridLayout spcLableGrid = new GridLayout(3, true);
-	spcLableGrid.numColumns=2;
+	spcLableGrid.numColumns = 2;
 	spcLableGrid.marginHeight = spcLableGrid.marginWidth = 0;
 	specLabelLayout.setLayout(spcLableGrid);
 
-	//new Label(specLabelLayout, SWT.NONE).setLayoutData(new GridData(SWT.END, SWT.CENTER, false, false));
+	// new Label(specLabelLayout, SWT.NONE).setLayoutData(new GridData(SWT.END,
+	// SWT.CENTER, false, false));
 	Label spcLabel = new Label(specLabelLayout, SWT.NONE);
 	spcLabel.setText("Specification");
-	GridData specGridData=new GridData();
-	specGridData.horizontalIndent=194;
+	GridData specGridData = new GridData();
+	specGridData.horizontalIndent = 194;
 	spcLabel.setLayoutData(specGridData);
-	
+
 	Label confLabel = new Label(specLabelLayout, SWT.NONE);
 	confLabel.setText("Configuration");
-	GridData confGridData=new GridData();
-	confGridData.horizontalIndent=187;
+	GridData confGridData = new GridData();
+	confGridData.horizontalIndent = 187;
 	confLabel.setLayoutData(confGridData);
-	
+
 	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
-	
+
 	specificationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
 	configurationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
 	specificationCombo.setEnabled(false);
@@ -240,12 +244,14 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     }
 
     private void updateComboBox() {
-	if (!isUpdateComboData) {
-	    String homeDir = StringHandler.getHomePath(executableText.getText().trim(), CPACEPConnector.CPA_HOME_PATH);
+	if (!isUpdateComboData && !executableText.getText().isEmpty()) {
+	    Path homeDir = StringHandler.getHomePath(executableText.getText().trim());
+	    Path configDir = homeDir.resolve("config");
 	    try {
-		specificationData = FileHandler.fileMatcher("glob:**/*.spc", homeDir + "/config/specification");
-		configurationData = FileHandler.fileMatcher("glob:**/*.properties", homeDir + "/config");
-
+		specificationData = FileHandler.fileMatcher("glob:*.spc",
+			configDir.resolve("specification"));
+		configurationData = FileHandler.fileMatcher("glob:*.properties",
+			configDir);
 		if (specificationData != null) {
 		    specificationCombo.setEnabled(true);
 
@@ -267,13 +273,13 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		    isComboEnable = false;
 		}
 
-		// addAutoCompleteFeature(specificationCombo);
-		// addAutoCompleteFeature(configurationCombo);
+		addAutoCompleteFeature(specificationCombo);
+		addAutoCompleteFeature(configurationCombo);
 	    } catch (IOException e) {
 		// TODO: handle exception
 		e.printStackTrace();
 	    }
-	    isUpdateComboData=true;
+	    isUpdateComboData = true;
 	}
     }
 
@@ -291,7 +297,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     /**
      * 
      * @param combo
-     *            Function to auto complete the combo box
+     * Function to auto complete the combo box
      */
     public static void addAutoCompleteFeature(Combo combo) {
 	// Add a key listener

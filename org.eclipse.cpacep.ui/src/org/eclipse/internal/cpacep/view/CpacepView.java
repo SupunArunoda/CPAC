@@ -7,7 +7,6 @@ import java.io.PrintStream;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
-import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.part.ViewPart;
@@ -17,8 +16,7 @@ public class CpacepView extends ViewPart {
     private Text text;
 
     public void createPartControl(Composite parent) {
-	text = new Text(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.READ_ONLY);
-	
+	text = new Text(parent, SWT.READ_ONLY | SWT.MULTI);
 	OutputStream out = new OutputStream() {
 	    @Override
 	    public void write(int b) throws IOException {
