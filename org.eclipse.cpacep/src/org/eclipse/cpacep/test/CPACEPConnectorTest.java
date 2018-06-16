@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class CPACEPConnectorTest {
 
-	String homePath = "/home/travis/build/SupunArunoda/CPACEP/cpachecker";
+	String homePath = "/home/travis/build/SupunArunoda/CPAChecker/cpachecker";
 	StringBuilder sb;
 	String lcSpecification;
 	String lcConfiguration;
@@ -28,12 +28,13 @@ public class CPACEPConnectorTest {
 		sb.append(" doc" + File.separator + "examples" + File.separator + "example.c");
 		sb.append(" -outputpath " + outputPathTest);
 		sb.append(" -stats");
+		CPACEPConnector.executeCommand(sb.toString());
 
 	}
 
 	@Test
 	public void testStatistics() {
-		CPACEPConnector.executeCommand(sb.toString());
+
 		String actualData = FileHandler.readFile(outputPathTest + File.separator + "Statistics.txt");
 		String expectData = FileHandler.readFile(outputPathOriginal + File.separator + "Statistics.txt");
 		assertEquals(expectData, actualData);
