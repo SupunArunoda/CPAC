@@ -1,6 +1,8 @@
 language: java
 sudo: false
 script: 
+  - mkdir /tmp/cpacep
+  - cd /tmp/cpacep
   - git clone https://github.com/SupunArunoda/CPACEP.git
   - mvn clean verify
   
