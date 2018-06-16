@@ -1,7 +1,7 @@
-install:
-  - git clone https://github.com/sosy-lab/cpachecker.git $CPAChecker
-  - cd $CPAChecker
-
 language: java
 sudo: false
 script: mvn clean verify
+
+after_success:
+  - git clone https://github.com/sosy-lab/cpachecker.git $CPAChecker
+  - cd $CPAChecker
