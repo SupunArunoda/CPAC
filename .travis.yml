@@ -6,5 +6,7 @@ before_install:
   - git clone https://github.com/sosy-lab/cpachecker.git $CPAChecker
   - cd cpachecker
   - ant build
-  - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c
+  - mkdir /tmp/cpacep
+  - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/cpacep -stats
+  - pwd
   
