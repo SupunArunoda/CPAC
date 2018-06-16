@@ -3,11 +3,12 @@ sudo: false
 script: 
   - git clone https://github.com/SupunArunoda/CPACEP.git
   - mvn clean verify
-  - mvn test
   
 
-after_script:
+before_script:
   - git clone https://github.com/sosy-lab/cpachecker.git
+  - mkdir /tmp/original
+  - mkdir /tmp/test
   - cd cpachecker
   - ant build
   - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/cpacep/original -stats
