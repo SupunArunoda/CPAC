@@ -5,7 +5,7 @@ script:
   - mvn clean verify
   
 
-before_script:
+after_script:
   - git clone https://github.com/sosy-lab/cpachecker.git
   - cd cpachecker
   - ant build
