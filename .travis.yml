@@ -6,7 +6,7 @@ script:
 before_install:
   - mkdir cpacep_test
   - cd cpacep_test
-  - git clone /tmp/https://github.com/sosy-lab/cpachecker.git
+  - git clone https://github.com/sosy-lab/cpachecker.git
   - mkdir /tmp/original
   - mkdir /tmp/test
   - cd cpachecker
