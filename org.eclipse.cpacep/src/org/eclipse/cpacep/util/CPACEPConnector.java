@@ -71,7 +71,7 @@ public class CPACEPConnector {
 		baseCli.add(" -stats");
 	}
 
-	private String executeCommand(String command) {
+	public static String executeCommand(String command) {
 		Process p;
 		StringBuilder output = new StringBuilder();
 		try {
