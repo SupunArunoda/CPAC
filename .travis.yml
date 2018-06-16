@@ -1,7 +1,7 @@
 language: java
 sudo: false
 script: 
-  - git clone https://github.com/sosy-lab/cpachecker.git
+  - git clone /tmp/https://github.com/sosy-lab/cpachecker.git
   - mkdir /tmp/original
   - mkdir /tmp/test
   - cd cpachecker
