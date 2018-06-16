@@ -1,13 +1,13 @@
 language: java
 sudo: false
-script: mvn clean verify
+script: 
+  - git clone https://github.com/SupunArunoda/CPACEP.git
+  - mvn clean verify
+  
 
-before_install:
-  - git clone https://github.com/sosy-lab/cpachecker.git $CPAChecker
+before_script:
+  - git clone https://github.com/sosy-lab/cpachecker.git
   - cd cpachecker
   - ant build
-  - mkdir /tmp/original
-  - mkdir /tmp/test
   - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/cpacep/original -stats
-  - git clone https://github.com/SupunArunoda/CPACEP.git $CPACEP
   
