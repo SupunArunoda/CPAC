@@ -13,8 +13,8 @@ public class CPACEPConnectorTest {
 	StringBuilder sb;
 	String lcSpecification;
 	String lcConfiguration;
-	String outputPathTest = "/tmp/cpacep/test";
-	String outputPathOriginal = "/tmp/cpacep/original";
+	String outputPathTest = "/tmp/test";
+	String outputPathOriginal = "/tmp/original";
 
 	@Before
 	public void setup() {
