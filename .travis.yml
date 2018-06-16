@@ -1,6 +1,9 @@
 language: java
 sudo: false
 script: 
+  - cd ..
+  - cd ..
+  - cd CPACEP
   - mvn clean verify
   
 before_install:
