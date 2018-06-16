@@ -6,7 +6,6 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowLayout;
 
 import java.io.File;
 import java.io.IOException;
@@ -142,23 +141,21 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	gridData.horizontalSpan = 4;
 	specLabelLayout.setLayoutData(gridData);
 
-	GridLayout spcLableGrid = new GridLayout(3, true);
-	spcLableGrid.numColumns = 2;
-	spcLableGrid.marginHeight = spcLableGrid.marginWidth = 0;
+	GridLayout spcLableGrid = new GridLayout(2, false);
+	spcLableGrid.marginHeight =0;
+	spcLableGrid.marginWidth = 200;
+	spcLableGrid.horizontalSpacing=210;
 	specLabelLayout.setLayout(spcLableGrid);
-
-	// new Label(specLabelLayout, SWT.NONE).setLayoutData(new GridData(SWT.END,
-	// SWT.CENTER, false, false));
+	
 	Label spcLabel = new Label(specLabelLayout, SWT.NONE);
 	spcLabel.setText("Specification");
-	GridData specGridData = new GridData();
-	specGridData.horizontalIndent = 194;
+	GridData specGridData = new GridData(GridData.FILL, GridData.BEGINNING, true, false);
 	spcLabel.setLayoutData(specGridData);
 
 	Label confLabel = new Label(specLabelLayout, SWT.NONE);
 	confLabel.setText("Configuration");
-	GridData confGridData = new GridData();
-	confGridData.horizontalIndent = 187;
+	
+	GridData confGridData = new GridData(GridData.FILL, GridData.END, true, false);
 	confLabel.setLayoutData(confGridData);
 
 	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
