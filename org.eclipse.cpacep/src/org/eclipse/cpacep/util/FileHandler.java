@@ -1,7 +1,6 @@
 package org.eclipse.cpacep.util;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
@@ -41,5 +40,31 @@ public class FileHandler {
 		});
 		Collections.sort(matchedList, String.CASE_INSENSITIVE_ORDER);
 		return matchedList;
+	}
+
+	public static String readFile(String filename) {
+		BufferedReader br = null;
+		StringBuilder sb = new StringBuilder();
+		try {
+
+			String sCurrentLine;
+
+			br = new BufferedReader(new FileReader(filename));
+
+			while ((sCurrentLine = br.readLine()) != null) {
+				sb.append(sCurrentLine);
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+		return sb.toString();
 	}
 }
