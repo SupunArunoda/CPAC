@@ -9,5 +9,5 @@ before_install:
   - mkdir /tmp/cpacep/test
   - mkdir /tmp/cpacep/original
   - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/cpacep/original -stats
-  - git clone https://github.com/SupunArunoda/CPACEP $CPACEP
+  - git clone https://github.com/SupunArunoda/CPACEP.git $CPACEP
   
