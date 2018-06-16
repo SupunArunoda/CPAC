@@ -15,4 +15,4 @@ before_install:
   - mkdir /tmp/test
   - cd cpachecker
   - ant build
-  - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/cpacep/original -stats
+  - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/original -stats
