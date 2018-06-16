@@ -2,6 +2,9 @@ language: java
 sudo: false
 script: mvn clean verify
 
-after_success:
+before_install:
   - git clone https://github.com/sosy-lab/cpachecker.git $CPAChecker
   - cd $CPAChecker
+  - scripts/cpa.sh -spec config/specification/JavaAssertion.spc -config config/invariantGeneration.properties doc/examples/example.c
+  - vim output/CPALog.txt
+  
