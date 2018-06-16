@@ -3,6 +3,7 @@ sudo: false
 script: 
   - git clone https://github.com/SupunArunoda/CPACEP.git
   - mvn clean verify
+  - mvn test
   
 
 after_script:
