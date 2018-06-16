@@ -25,7 +25,7 @@ public class CPACEPConnectorTest {
 		sb.append(homePath + File.separator + "scripts" + File.separator + "cpa.sh");
 		sb.append(" -spec " + homePath + File.separator + "config" + File.separator + "specification" + File.separator + lcSpecification + ".spc");
 		sb.append(" -config " + homePath + File.separator + "config" + File.separator + lcConfiguration + ".properties");
-		sb.append(" doc" + File.separator + "examples" + File.separator + "example.c");
+		sb.append(" " + homePath + File.separator + "doc" + File.separator + "examples" + File.separator + "example.c");
 		sb.append(" -outputpath " + outputPathTest);
 		sb.append(" -stats");
 		CPACEPConnector.executeCommand(sb.toString());
