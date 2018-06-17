@@ -6,6 +6,7 @@ script:
   - cd CPACEP
   - mkdir /tmp/test
   - mvn clean verify
+  - ls /tmp/test
   
 before_install:
   - cd ..
