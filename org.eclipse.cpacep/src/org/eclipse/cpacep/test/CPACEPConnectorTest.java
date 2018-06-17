@@ -9,7 +9,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class CPACEPConnectorTest {
-
+	//String homePath = "/home/supun/Documents/cpachecker";
+	//String homePath = "/home/supun/Documents/CPAchecker-1.7-unix";
 	String homePath = "/home/travis/build/SupunArunoda/CPAChecker/cpachecker";
 	StringBuilder sb;
 	String lcSpecification;
