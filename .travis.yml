@@ -3,7 +3,7 @@ sudo: false
 script: 
   - ant build
   - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/original -stats
-  - cd ../../CPACEP
+  - cd ../CPACEP
   - mvn clean verify
   
 before_install:
