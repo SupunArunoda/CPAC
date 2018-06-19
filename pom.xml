@@ -26,10 +26,32 @@
 			<layout>p2</layout>
 		</repository>
 	  </repositories>
+	
+         <dependencies>
+	   <dependency>
+	     <groupId>com.google.googlejavaformat</groupId>
+             <artifactId>google-java-format</artifactId>
+              <version>1.6</version>
+           </dependency>
+        </dependencies>
+
 	<build>
 		<defaultGoal>clean install</defaultGoal>
 		<plugins>
 			
+			<plugin>
+			    <groupId>net.revelc.code.formatter</groupId>
+			    <artifactId>formatter-maven-plugin</artifactId>
+			    <version>2.7.3</version>
+			    <configuration>
+				<directories>
+      					<directory>org.eclipse.cpacep/src/org/eclipse/cpacep/</directory>
+      					<directory>org.eclipse.cpacep.ui/src/org/eclipse/internal/cpacep/</directory>
+    				</directories>
+				<configFile>${project.basedir}/eclipse-java-google-style.xml</configFile>
+				<encoding>UTF-8</encoding>
+			    </configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
