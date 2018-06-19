@@ -36,6 +36,10 @@ public class CPACEPConnector {
 	private String CPACheckerHome;
 	private String result;
 
+	public CPACEPConnector() {
+
+	}
+
 	public CPACEPConnector(ILaunchConfiguration config) {
 
 		try {
@@ -71,7 +75,7 @@ public class CPACEPConnector {
 		baseCli.add(" -stats");
 	}
 
-	public static String executeCommand(String command) {
+	public String executeCommand(String command) {
 		Process p;
 		StringBuilder output = new StringBuilder();
 		try {

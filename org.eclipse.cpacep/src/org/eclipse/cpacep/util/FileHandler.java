@@ -1,10 +1,10 @@
 package org.eclipse.cpacep.util;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class FileHandler {
 
@@ -42,29 +42,8 @@ public class FileHandler {
 		return matchedList;
 	}
 
-	public static String readFile(String filename) {
-		BufferedReader br = null;
-		StringBuilder sb = new StringBuilder();
-		try {
+	public static List<String> readFile(File file) throws IOException {
+		return Files.readAllLines(file.toPath());
 
-			String sCurrentLine;
-
-			br = new BufferedReader(new FileReader(filename));
-
-			while ((sCurrentLine = br.readLine()) != null) {
-				sb.append(sCurrentLine);
-			}
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (br != null)
-					br.close();
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		}
-		return sb.toString();
 	}
 }

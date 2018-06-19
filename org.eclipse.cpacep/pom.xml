@@ -11,7 +11,7 @@
   <artifactId>org.eclipse.cpacep</artifactId>
   <packaging>eclipse-plugin</packaging>
 <build>
-<testSourceDirectory>src/org/eclipse/cpacep/test</testSourceDirectory>
+<testSourceDirectory>test</testSourceDirectory>
 	<plugins>
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
