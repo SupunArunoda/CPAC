@@ -21,7 +21,7 @@ public class RunAction extends ActionEvent {
 
 	@Override
 	public String getText() {
-		return Messages.PropertiesView_actionRun;
+		return Messages.PropertiesViewForm_actionRun;
 	}
 
 	@Override

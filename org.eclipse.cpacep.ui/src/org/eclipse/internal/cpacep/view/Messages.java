@@ -9,7 +9,9 @@ public class Messages extends NLS {
 
 
 	public static String PropertiesViewForm_actionStop;
-	public static String PropertiesView_actionRun;
+	public static String PropertiesViewForm_actionRun;
+	public static String PropertiesViewForm_actionStatistics;
+	public static String PropertiesViewForm_actionResult;
 	
 	static {
 		// initialize resource bundle
