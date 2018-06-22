@@ -68,7 +68,6 @@ public class CPACEPConnector {
 		baseCli.add(lcCommandLine);
 		baseCli.add(lcSourceFile);
 		baseCli.add(" -outputpath " + outputDirectory);
-		baseCli.add(" -stats");
 	}
 
 	private String executeCommand(String command) {
