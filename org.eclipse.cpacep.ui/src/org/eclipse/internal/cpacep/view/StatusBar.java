@@ -1,10 +1,5 @@
 package org.eclipse.internal.cpacep.view;
 
-import org.eclipse.core.databinding.DataBindingContext;
-import org.eclipse.core.databinding.UpdateValueStrategy;
-import org.eclipse.core.databinding.beans.PojoProperties;
-import org.eclipse.core.databinding.conversion.IConverter;
-import org.eclipse.emf.databinding.EMFProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.*;
 import org.eclipse.swt.graphics.*;
@@ -14,8 +9,6 @@ public class StatusBar extends Canvas {
     private static final int DEFAULT_WIDTH = 160;
     private static final int DEFAULT_HEIGHT = 18;
 
-    int fCurrentTickCount = 0;
-    private int fMaxTickCount = 0;
     int fColorBarWidth = 0;
 
     public int getfColorBarWidth() {
@@ -29,19 +22,17 @@ public class StatusBar extends Canvas {
 
     Color fOKColor;
     Color fFailureColor;
-    Color fStoppedColor;
-    boolean fError;
+    Color fUnknownColor;
 
-    private boolean fStopped = false;
-    private DataBindingContext bindingContext;
+    private boolean fSuccess;
+    private boolean fError;
+    private boolean fUnknown = false;
 
     public StatusBar(Composite parent) {
 	super(parent, SWT.NONE);
 	addControlListener(new ControlAdapter() {
 	    @Override
 	    public void controlResized(ControlEvent e) {
-		fColorBarWidth = scale(fCurrentTickCount);
-		redraw();
 	    }
 	});
 	addPaintListener(new PaintListener() {
@@ -53,31 +44,25 @@ public class StatusBar extends Canvas {
 	    public void widgetDisposed(DisposeEvent e) {
 		fFailureColor.dispose();
 		fOKColor.dispose();
-		fStoppedColor.dispose();
+		fUnknownColor.dispose();
 	    }
 	});
 	Display display = parent.getDisplay();
 	fFailureColor = new Color(display, 159, 63, 63);
 	fOKColor = new Color(display, 95, 191, 95);
-	fStoppedColor = new Color(display, 120, 120, 120);
-    }
-
-    public void setMaximum(int max) {
-	fMaxTickCount = max;
+	fUnknownColor = new Color(display, 120, 120, 120);
     }
 
     public void reset() {
 	fError = false;
-	fStopped = false;
-	fCurrentTickCount = 0;
-	fMaxTickCount = 0;
+	fUnknown = false;
 	fColorBarWidth = 0;
 	redraw();
     }
 
     private void setStatusColor(GC gc) {
-	if (fStopped)
-	    gc.setBackground(fStoppedColor);
+	if (fUnknown)
+	    gc.setBackground(fUnknownColor);
 	else if (fError)
 	    gc.setBackground(fFailureColor);
 	else
@@ -85,17 +70,8 @@ public class StatusBar extends Canvas {
     }
 
     public void stopped() {
-	fStopped = true;
+	fUnknown = true;
 	redraw();
-    }
-
-    int scale(int value) {
-	if (fMaxTickCount > 0) {
-	    Rectangle r = getClientArea();
-	    if (r.width != 0)
-		return Math.max(0, value * (r.width - 2) / fMaxTickCount);
-	}
-	return value;
     }
 
     private void drawBevelRect(GC gc, int x, int y, int w, int h, Color topleft, Color bottomright) {
@@ -139,12 +115,32 @@ public class StatusBar extends Canvas {
 	redraw();
     }
 
-    public void bind() {
-
+    public void setStatus(String status, Display display) {
+	if (status.equals("TRUE")) {
+	    success(display);
+	} else if (status.equals("FALSE")) {
+	    failure(display);
+	} else if (status.equals("UNKNOWN")) {
+	    unknown(display);
+	}else {
+	    clear(display);
+	}
     }
 
-    public void dispose() {
-	if (bindingContext != null)
-	    bindingContext.dispose();
+    public void success(Display display) {
+	this.setBackground(new Color(display, 0, 153, 0));
     }
+
+    public void failure(Display display) {
+	this.setBackground(new Color(display, 255, 0, 0));
+    }
+
+    public void unknown(Display display) {
+	this.setBackground(new Color(display, 255, 254, 0));
+    }
+    
+    public void clear(Display display) {
+	this.setBackground(new Color(display, 255,255,255));
+    }
+
 }

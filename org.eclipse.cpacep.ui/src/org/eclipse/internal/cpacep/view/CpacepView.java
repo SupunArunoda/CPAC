@@ -5,6 +5,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 import org.eclipse.cpacep.util.CPACEPConnector;
+import org.eclipse.cpacep.util.StringHandler;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -54,7 +55,10 @@ public class CpacepView extends ViewPart {
     public void startValidation(CPACEPConnector cpacepConnector, CpacepView cpacepView) {
 	this.cpacepConnector = cpacepConnector;
 	this.cpacepView = cpacepView;
-	text.setText(cpacepConnector.getResult());
+	String result=cpacepConnector.getResult();
+	text.setText(result);
+	String status=StringHandler.getResultFilter(result);
+	statusBar.setStatus(status, parent.getDisplay());
 	enableActions();
     }
 
@@ -68,6 +72,7 @@ public class CpacepView extends ViewPart {
 
     public void reset() {
 	text.setText("");
+	statusBar.clear(parent.getDisplay());
     }
 
     public CPACEPConnector getCPACEPConncetor() {
@@ -80,5 +85,12 @@ public class CpacepView extends ViewPart {
 
     public Text getText() {
 	return text;
+    }
+    
+    public StatusBar getStatusBar() {
+	return statusBar;
+    }
+    public Composite getComposite() {
+	return parent;
     }
 }
