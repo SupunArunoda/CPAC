@@ -79,7 +79,7 @@ public class CPACEPConnector {
 		baseCli.add(" -outputpath " + outputDirectory);
 	}
 
-	private String executeCommand(String command) {
+	public String executeCommand(String command) {
 
 		StringBuilder output = new StringBuilder();
 		try {

@@ -1,4 +1,4 @@
-package org.eclipse.cpacep;
+package org.eclipse.cpacep.util;
 
 import static org.junit.Assert.assertEquals;
 
@@ -7,9 +7,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import org.eclipse.cpacep.util.CPACEPConnector;
-import org.eclipse.cpacep.util.FileHandler;
-import org.eclipse.cpacep.util.StringHandler;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,7 +14,7 @@ public class CPACEPConnectorTest {
 	//String homePath = "/home/supun/Documents/cpachecker";
 	//Path homePath = Paths.get(File.separator + "home").resolve("supun").resolve("Documents").resolve("CPAchecker-1.7-unix");
 	//Path homePath = Paths.get("/home/supun/Documents/CPAchecker-1.7-unix");
-	Path homePath = Paths.get(File.separator+"home").resolve("travis").resolve("build").resolve("SupunArunoda").resolve("cpachecker"));
+	Path homePath = Paths.get(File.separator + "home").resolve("travis").resolve("build").resolve("SupunArunoda").resolve("cpachecker");
 	//Path homePath = StringHandler.getHomePath(File.separator + "home" + File.separator + "travis" + File.separator + "build" + File.separator + "SupunArunoda" + File.separator + "cpachecker");
 	StringBuilder sb;
 	String lcSpecification;

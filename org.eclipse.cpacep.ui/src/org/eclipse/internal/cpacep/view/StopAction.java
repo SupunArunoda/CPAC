@@ -2,7 +2,6 @@ package org.eclipse.internal.cpacep.view;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.cpacep.util.CPACEPConnector;
 
 public class StopAction extends ActionEvent {
 

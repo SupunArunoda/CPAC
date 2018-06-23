@@ -1,8 +1,8 @@
 package org.eclipse.internal.cpacep.view;
 
-import org.eclipse.core.runtime.jobs.*;
-import org.eclipse.cpacep.util.CPACEPConnector;
-import org.eclipse.jface.action.*;
+import org.eclipse.jface.action.ActionContributionItem;
+import org.eclipse.jface.action.IContributionItem;
+import org.eclipse.jface.action.IToolBarManager;
 
 public class ViewToolBar {
     private IToolBarManager toolBarManager;
