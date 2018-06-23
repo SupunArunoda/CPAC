@@ -2,6 +2,7 @@ package org.eclipse.internal.cpacep.view;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.cpacep.util.CPACEPConnector;
 
 public class StopAction extends ActionEvent {
 
@@ -31,6 +32,9 @@ public class StopAction extends ActionEvent {
 
     @Override
     public void run() {
+	CpacepView cpacepView = CpacepView.getViewInstance();
+	cpacepView.reset();
+	cpacepView.getCPACEPConncetor().killCommand();
 
     }
 }

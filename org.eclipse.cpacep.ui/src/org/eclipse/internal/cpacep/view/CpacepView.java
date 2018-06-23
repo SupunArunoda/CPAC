@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
+import org.eclipse.cpacep.util.CPACEPConnector;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.DisposeEvent;
 import org.eclipse.swt.events.DisposeListener;
@@ -17,10 +18,14 @@ public class CpacepView extends ViewPart {
     public static final String ID = "org.eclipse.cpacep.ui.view.properties"; //$NON-NLS-1$
 
     private Text text;
+    private StringBuilder output;
 
     private Composite parent;
     private ViewToolBar toolbar;
     private StatusBar statusBar;
+
+    private CPACEPConnector cpacepConnector;
+    public static CpacepView cpacepView;
 
     public void createPartControl(Composite p) {
 	this.parent = p;
@@ -34,53 +39,46 @@ public class CpacepView extends ViewPart {
 	toolbar = new ViewToolBar(getViewSite().getActionBars().getToolBarManager());
 
 	text = new Text(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.READ_ONLY);
-	
-	text.setSize(200,200);
+	output = new StringBuilder();
+
+	text.setSize(200, 200);
 	GridData gridData = new GridData(GridData.FILL, GridData.FILL, true, true);
 	gridData.horizontalSpan = 2;
 	text.setLayoutData(gridData);
-	
-	OutputStream out = new OutputStream() {
-	    @Override
-	    public void write(int b) throws IOException {
-		if (text.isDisposed())
-		    return;
-		text.append(String.valueOf((char) b));
-	    }
-	};
-	final PrintStream oldOut = System.out;
-	System.setOut(new PrintStream(out));
-	text.addDisposeListener(new DisposeListener() {
-	    public void widgetDisposed(DisposeEvent e) {
-		System.setOut(oldOut);
-	    }
-	});
     }
 
-    // public void createPartControl(Composite parent) {
-    // text = new Text(parent, SWT.READ_ONLY | SWT.MULTI);
-    // OutputStream out = new OutputStream() {
-    // @Override
-    // public void write(int b) throws IOException {
-    // if (text.isDisposed())
-    // return;
-    // text.append(String.valueOf((char) b));
-    // }
-    // };
-    // final PrintStream oldOut = System.out;
-    // System.setOut(new PrintStream(out));
-    // text.addDisposeListener(new DisposeListener() {
-    // public void widgetDisposed(DisposeEvent e) {
-    // System.setOut(oldOut);
-    // }
-    // });
-    // }
+    public static CpacepView getViewInstance() {
+	return cpacepView;
+    }
+
+    public void startValidation(CPACEPConnector cpacepConnector, CpacepView cpacepView) {
+	this.cpacepConnector = cpacepConnector;
+	this.cpacepView = cpacepView;
+	text.setText(cpacepConnector.getResult());
+	enableActions();
+    }
+
+    public void enableActions() {
+	toolbar.enableActions(true);
+    }
 
     public void setFocus() {
-	
+
     }
 
     public void reset() {
 	text.setText("");
+    }
+
+    public CPACEPConnector getCPACEPConncetor() {
+	return cpacepConnector;
+    }
+
+    public void setCPACEPConnector(CPACEPConnector cpacepConnector) {
+	this.cpacepConnector = cpacepConnector;
+    }
+
+    public Text getText() {
+	return text;
     }
 }

@@ -1,17 +1,46 @@
 package org.eclipse.internal.cpacep.view;
 
 import org.eclipse.core.runtime.jobs.*;
+import org.eclipse.cpacep.util.CPACEPConnector;
 import org.eclipse.jface.action.*;
 
 public class ViewToolBar {
-    IToolBarManager toolBarManager;
+    private IToolBarManager toolBarManager;
+    private RunAction runAction;
+    private StopAction stopAction;
+    private StatisticAction statisticAction;
+    private ResultTableAction resultTableAction;
 
     public ViewToolBar(IToolBarManager toolBarManager) {
 	this.toolBarManager = toolBarManager;
-	toolBarManager.add(new RunAction(this));
-	toolBarManager.add(new StopAction(this));
-	toolBarManager.add(new StatisticAction(this));
-	toolBarManager.add(new ResultTableAction(this));
+	runAction = new RunAction(this);
+	stopAction = new StopAction(this);
+	statisticAction = new StatisticAction(this);
+	resultTableAction = new ResultTableAction(this);
+	enableActions(false);
+	toolBarManager.add(runAction);
+	toolBarManager.add(stopAction);
+	toolBarManager.add(statisticAction);
+	toolBarManager.add(resultTableAction);
+
+    }
+
+    public void enableActions(boolean enable) {
+	if (enable) {
+	    runAction.setEnabled(true);
+	    stopAction.setEnabled(true);
+	    statisticAction.setEnabled(true);
+	    resultTableAction.setEnabled(true);
+	    runAction.setImageDescriptor(runAction.getImageDescriptor());
+	    stopAction.setImageDescriptor(stopAction.getImageDescriptor());
+	} else {
+	    runAction.setEnabled(false);
+	    stopAction.setEnabled(false);
+	    statisticAction.setEnabled(false);
+	    resultTableAction.setEnabled(false);
+	    runAction.setDisabledImageDescriptor(runAction.getDisabledImageDescriptor());
+	    stopAction.setDisabledImageDescriptor(stopAction.getDisabledImageDescriptor());
+	}
     }
 
     void refresh() {
