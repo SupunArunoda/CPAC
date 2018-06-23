@@ -1,7 +1,10 @@
 
 package org.eclipse.internal.cpacep.launcher;
 
-import org.eclipse.debug.ui.*;
+import org.eclipse.debug.ui.AbstractLaunchConfigurationTabGroup;
+import org.eclipse.debug.ui.CommonTab;
+import org.eclipse.debug.ui.ILaunchConfigurationDialog;
+import org.eclipse.debug.ui.ILaunchConfigurationTab;
 
 public class LaunchConfigurationTab extends AbstractLaunchConfigurationTabGroup {
 

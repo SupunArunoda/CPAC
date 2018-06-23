@@ -4,22 +4,27 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import org.eclipse.cpacep.util.CPACEPConnector;
 import org.eclipse.cpacep.util.FileHandler;
+import org.eclipse.cpacep.util.StringHandler;
 import org.junit.Before;
 import org.junit.Test;
 
 public class CPACEPConnectorTest {
 	//String homePath = "/home/supun/Documents/cpachecker";
-	//String homePath = "/home/supun/Documents/CPAchecker-1.7-unix";
-	String homePath = File.separator + "home" + File.separator + "travis" + File.separator + "build" + File.separator + "SupunArunoda" + File.separator + "cpachecker";
+	//Path homePath = Paths.get(File.separator + "home").resolve("supun").resolve("Documents").resolve("CPAchecker-1.7-unix");
+	//Path homePath = Paths.get("/home/supun/Documents/CPAchecker-1.7-unix");
+	Path homePath = Paths.get(File.separator+"home").resolve("travis").resolve("build").resolve("SupunArunoda").resolve("cpachecker"));
+	//Path homePath = StringHandler.getHomePath(File.separator + "home" + File.separator + "travis" + File.separator + "build" + File.separator + "SupunArunoda" + File.separator + "cpachecker");
 	StringBuilder sb;
 	String lcSpecification;
 	String lcConfiguration;
 	String result;
 
-	String outputPathOriginal = File.separator + "tmp" + File.separator + "original";
+	Path outputPathOriginal = Paths.get(File.separator + "tmp").resolve("original");
 	File outputDirectory;
 
 	@Before
@@ -34,10 +39,10 @@ public class CPACEPConnectorTest {
 			throw new AssertionError();
 		}
 		sb = new StringBuilder();
-		sb.append(homePath + File.separator + "scripts" + File.separator + "cpa.sh");
-		sb.append(" -spec " + homePath + File.separator + "config" + File.separator + "specification" + File.separator + lcSpecification + ".spc");
-		sb.append(" -config " + homePath + File.separator + "config" + File.separator + lcConfiguration + ".properties");
-		sb.append(" " + homePath + File.separator + "doc" + File.separator + "examples" + File.separator + "example.c");
+		sb.append(homePath.resolve("scripts").resolve("cpa.sh"));
+		sb.append(" -spec " + homePath.resolve("config").resolve("specification").resolve(lcSpecification + ".spc"));
+		sb.append(" -config " + homePath.resolve("config").resolve(lcConfiguration + ".properties"));
+		sb.append(" " + homePath.resolve("doc").resolve("examples").resolve("example.c"));
 		sb.append(" -outputpath " + outputDirectory);
 		sb.append(" -stats");
 		cpacepConnector.executeCommand(sb.toString());
@@ -49,6 +54,7 @@ public class CPACEPConnectorTest {
 		setup();
 		List<String> actualData;
 		List<String> expectData;
+		String testName = "Verification result:";
 		try {
 			actualData = FileHandler.readFile(new File(outputDirectory.getAbsolutePath() + File.separator + "Statistics.txt"));
 			expectData = FileHandler.readFile(new File(outputPathOriginal + File.separator + "Statistics.txt")); //$NON-NLS-1$
@@ -56,10 +62,12 @@ public class CPACEPConnectorTest {
 			// TODO Auto-generated catch block
 			throw new AssertionError(e.getMessage());
 		}
-		//Check whether the "Verification result*" are equal 
+		//Check whether the results have testName 
 		int expectedDataSize = expectData.size();
 		int actualDataSize = actualData.size();
-		assertEquals(expectData.get(expectedDataSize - 2), actualData.get(actualDataSize - 2));
+		boolean expect = expectData.get(expectedDataSize - 2).contains(testName);
+		boolean actual = actualData.get(actualDataSize - 2).contains(testName);
+		assertEquals(expect, actual);
 
 	}
 }
