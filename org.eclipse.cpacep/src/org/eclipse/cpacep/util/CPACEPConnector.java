@@ -39,6 +39,8 @@ public class CPACEPConnector {
 	private String CPACheckerHome;
 	private String result;
 
+	private Process p;
+
 	public CPACEPConnector() {
 
 	}
@@ -75,15 +77,14 @@ public class CPACEPConnector {
 		baseCli.add(lcCommandLine);
 		baseCli.add(lcSourceFile);
 		baseCli.add(" -outputpath " + outputDirectory);
-		baseCli.add(" -stats");
 	}
 
-	public String executeCommand(String command) {
-		Process p;
+	private String executeCommand(String command) {
+
 		StringBuilder output = new StringBuilder();
 		try {
 			p = Runtime.getRuntime().exec(command);
-			p.waitFor();
+			//p.waitFor();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
 			String line = "";
@@ -97,7 +98,11 @@ public class CPACEPConnector {
 		return output.toString();
 	}
 
-	private void fillInLaunch() {
+	public void killCommand() {
+		p.destroy();
+	}
+
+	public void fillInLaunch() {
 		StringBuilder sb = new StringBuilder();
 		for (String command : baseCli) {
 			if (!command.equals("")) {
@@ -105,7 +110,6 @@ public class CPACEPConnector {
 			}
 		}
 		result = executeCommand(sb.toString());
-		System.out.println(result);
 
 	}
 
