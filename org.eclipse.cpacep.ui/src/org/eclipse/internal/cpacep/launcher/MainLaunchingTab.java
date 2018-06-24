@@ -135,30 +135,25 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 		sourcesButtonSelected();
 	    }
 	});
-
-	Composite specLabelLayout = new Composite(comp, SWT.NONE);
-	gridData = new GridData(GridData.FILL_HORIZONTAL);
-	gridData.horizontalSpan = 4;
-	specLabelLayout.setLayoutData(gridData);
-
-	GridLayout spcLableGrid = new GridLayout(2, false);
-	spcLableGrid.marginHeight =0;
-	spcLableGrid.marginWidth = 200;
-	spcLableGrid.horizontalSpacing=210;
-	specLabelLayout.setLayout(spcLableGrid);
 	
-	Label spcLabel = new Label(specLabelLayout, SWT.NONE);
+	Label arLabel=new Label(comp, SWT.NONE);
+	arLabel.setText(Messages.MainLaunchingTab_labelProgramArgs);
+	gridData = new GridData();
+	gridData.verticalSpan = 2;
+	arLabel.setLayoutData(gridData);
+	
+	
+	Label spcLabel = new Label(comp, SWT.NONE);
 	spcLabel.setText("Specification");
-	GridData specGridData = new GridData(GridData.FILL, GridData.BEGINNING, true, false);
+	GridData specGridData = new GridData(GridData.FILL_HORIZONTAL);
+	specGridData.horizontalSpan=1;
 	spcLabel.setLayoutData(specGridData);
 
-	Label confLabel = new Label(specLabelLayout, SWT.NONE);
+	Label confLabel = new Label(comp, SWT.NONE);
 	confLabel.setText("Configuration");
-	
-	GridData confGridData = new GridData(GridData.FILL, GridData.END, true, false);
+	GridData confGridData = new GridData(GridData.FILL_HORIZONTAL);
+	confGridData.horizontalSpan=1;
 	confLabel.setLayoutData(confGridData);
-
-	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
 
 	specificationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
 	configurationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
@@ -176,7 +171,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
     @Override
     public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
 	// TODO Auto-generated method stub
-	System.out.println("Inside defaults");
 
     }
 
@@ -247,10 +241,8 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	    Path homeDir = StringHandler.getHomePath(executableText.getText().trim());
 	    Path configDir = homeDir.resolve("config");
 	    try {
-		specificationData = FileHandler.fileMatcher("glob:*.spc",
-			configDir.resolve("specification"));
-		configurationData = FileHandler.fileMatcher("glob:*.properties",
-			configDir);
+		specificationData = FileHandler.fileMatcher("glob:*.spc", configDir.resolve("specification"));
+		configurationData = FileHandler.fileMatcher("glob:*.properties", configDir);
 		if (specificationData != null) {
 		    specificationCombo.setEnabled(true);
 
