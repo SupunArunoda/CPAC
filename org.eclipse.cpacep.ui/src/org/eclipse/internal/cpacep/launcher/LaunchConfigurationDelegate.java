@@ -26,12 +26,11 @@ public class LaunchConfigurationDelegate extends org.eclipse.debug.core.model.La
 		    page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 		    view = (CpacepView) page.findView(CpacepView.ID);
 		    if (view == null) {
-			view = (CpacepView) page.showView(CpacepView.ID, null,
-				IWorkbenchPage.VIEW_ACTIVATE);
-		    }else {
+			view = (CpacepView) page.showView(CpacepView.ID, null, IWorkbenchPage.VIEW_ACTIVATE);
+		    } else {
 			view.reset();
 		    }
-		    CPACEPConnector.create(configuration);
+		    view.startValidation(CPACEPConnector.create(configuration), view);
 
 		} catch (PartInitException e) {
 		    e.printStackTrace();

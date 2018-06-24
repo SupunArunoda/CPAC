@@ -170,11 +170,13 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
 	gridData.horizontalSpan = 2;
 	commandLineText.setLayoutData(gridData);
+	commandLineText.addModifyListener(modifyListener);
     }
 
     @Override
     public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
 	// TODO Auto-generated method stub
+	System.out.println("Inside defaults");
 
     }
 
