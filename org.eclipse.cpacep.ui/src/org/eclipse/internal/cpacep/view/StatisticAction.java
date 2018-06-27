@@ -35,9 +35,11 @@ public class StatisticAction extends ActionEvent {
 	CpacepView cpacepView = CpacepView.getViewInstance();
 	Statistics dialog = new Statistics(cpacepView.getComposite().getShell());
 	dialog.create();
-	if (dialog.open() == Window.OK) {
-
-	}
+	dialog.open();
+	cpacepView.getCPACEPConncetor().getStatistics();
+//	if (dialog.open() == Window.OK) {
+//
+//	}
 
     }
 }

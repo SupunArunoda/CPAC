@@ -46,6 +46,7 @@ public class Statistics extends TitleAreaDialog {
 
 	return area;
     }
+    
 
     @Override
     protected boolean isResizable() {
