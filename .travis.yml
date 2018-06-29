@@ -1,13 +1,13 @@
 language: java
 sudo: false
 script: 
+  - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/original -stats
   - cd ../CPACEP
   - mvn clean verify
   
-before_install:
+install:
   - cd ..
   - git clone https://github.com/sosy-lab/cpachecker.git
   - mkdir /tmp/original
   - cd cpachecker
   - ant build
-  - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/original -stats
