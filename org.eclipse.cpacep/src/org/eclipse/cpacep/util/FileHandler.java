@@ -4,8 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class FileHandler {
 
@@ -41,5 +40,10 @@ public class FileHandler {
 		});
 		Collections.sort(matchedList, String.CASE_INSENSITIVE_ORDER);
 		return matchedList;
+	}
+
+	public static List<String> readFile(File file) throws IOException {
+		return Files.readAllLines(file.toPath());
+
 	}
 }
