@@ -116,6 +116,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
 	gridData.horizontalSpan = 2;
 	sourceText.setLayoutData(gridData);
+	sourceText.addModifyListener(modifyListener);
 	sourceText.setFont(font);
 
 	Composite tempButtonLayout = new Composite(comp, SWT.NONE);
@@ -167,6 +168,8 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	configurationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
 	specificationCombo.setEnabled(false);
 	configurationCombo.setEnabled(false);
+	configurationCombo.addModifyListener(modifyListener);
+	specificationCombo.addModifyListener(modifyListener);
 
 	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCommandLineArgs);
 	commandLineText = new Text(comp, SWT.SINGLE | SWT.BORDER);
