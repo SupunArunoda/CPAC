@@ -67,108 +67,6 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
   }
 
   @Override
-  public void createControl(Composite parent) {
-    // TODO Auto-generated method stub
-    updateLaunchConfigurationDialog();
-    Font font = parent.getFont();
-    Composite comp = new Composite(parent, SWT.NONE);
-    setControl(comp);
-    GridLayout topLayout = new GridLayout();
-    topLayout.verticalSpacing = 7;
-    topLayout.horizontalSpacing = 7;
-    topLayout.numColumns = 3;
-    comp.setLayout(topLayout);
-    comp.setFont(font);
-
-    createVerticalSpacer(comp, 3);
-
-    new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCPAChecker);
-    executableText = new Text(comp, SWT.SINGLE | SWT.BORDER);
-    GridData gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
-    gridData.horizontalSpan = 2;
-    executableText.setLayoutData(gridData);
-    executableText.addModifyListener(modifyListener);
-
-    Composite tempBrowseLayout = new Composite(comp, SWT.NONE);
-    gridData = new GridData(GridData.FILL_HORIZONTAL);
-    gridData.horizontalSpan = 3;
-    tempBrowseLayout.setLayoutData(gridData);
-
-    GridLayout browseButtonLayout = new GridLayout(4, false);
-    browseButtonLayout.marginHeight = browseButtonLayout.marginWidth = 0;
-    tempBrowseLayout.setLayout(browseButtonLayout);
-
-    Label tempLbl = new Label(tempBrowseLayout, SWT.NONE);
-    tempLbl.setLayoutData(new GridData(SWT.END, SWT.CENTER, true, false));
-
-    executableButton =
-        createPushButton(tempBrowseLayout, Messages.MainLaunchingTab_labelBrowse, null);
-    executableButton.addSelectionListener(new SelectionAdapter() {
-      public void widgetSelected(SelectionEvent e) {
-        CPACExecutableButtonSelected();
-      }
-    });
-
-    new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelFile);
-    sourceText = new Text(comp, SWT.SINGLE | SWT.BORDER);
-    gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
-    gridData.horizontalSpan = 2;
-    sourceText.setLayoutData(gridData);
-    sourceText.setFont(font);
-
-    Composite tempButtonLayout = new Composite(comp, SWT.NONE);
-    gridData = new GridData(GridData.FILL_HORIZONTAL);
-    gridData.horizontalSpan = 3;
-    tempButtonLayout.setLayoutData(gridData);
-
-    GridLayout buttonLayout = new GridLayout(4, false);
-    buttonLayout.marginHeight = buttonLayout.marginWidth = 0;
-    tempButtonLayout.setLayout(buttonLayout);
-
-    Label tempLbl2 = new Label(tempButtonLayout, SWT.NONE);
-    tempLbl2.setLayoutData(new GridData(SWT.END, SWT.CENTER, true, false));
-
-    sourceFileButton =
-        createPushButton(tempButtonLayout, Messages.MainLaunchingTab_sourcesBrowse, null);
-    sourceFileButton.addSelectionListener(new SelectionAdapter() {
-      public void widgetSelected(SelectionEvent e) {
-        sourcesButtonSelected();
-      }
-    });
-
-    Label arLabel = new Label(comp, SWT.NONE);
-    arLabel.setText(Messages.MainLaunchingTab_labelProgramArgs);
-    gridData = new GridData();
-    gridData.verticalSpan = 2;
-    arLabel.setLayoutData(gridData);
-
-
-    Label spcLabel = new Label(comp, SWT.NONE);
-    spcLabel.setText("Specification");
-    GridData specGridData = new GridData(GridData.FILL_HORIZONTAL);
-    specGridData.horizontalSpan = 1;
-    spcLabel.setLayoutData(specGridData);
-
-    Label confLabel = new Label(comp, SWT.NONE);
-    confLabel.setText("Configuration");
-    GridData confGridData = new GridData(GridData.FILL_HORIZONTAL);
-    confGridData.horizontalSpan = 1;
-    confLabel.setLayoutData(confGridData);
-
-    specificationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
-    configurationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
-    specificationCombo.setEnabled(false);
-    configurationCombo.setEnabled(false);
-
-    new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCommandLineArgs);
-    commandLineText = new Text(comp, SWT.SINGLE | SWT.BORDER);
-    gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
-    gridData.horizontalSpan = 2;
-    commandLineText.setLayoutData(gridData);
-    commandLineText.addModifyListener(modifyListener);
-  }
-
-  @Override
   public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
     // TODO Auto-generated method stub
 
@@ -219,9 +117,119 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
       configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD,
           cmd.toString().length() == 0 ? null : cmd);
       configuration.setAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, true);
+      }
     }
 
-  }
+    @Override
+    public void createControl(Composite parent) {
+	// TODO Auto-generated method stub
+	updateLaunchConfigurationDialog();
+	Font font = parent.getFont();
+	Composite comp = new Composite(parent, SWT.NONE);
+	setControl(comp);
+	GridLayout topLayout = new GridLayout();
+	topLayout.verticalSpacing = 7;
+	topLayout.horizontalSpacing = 7;
+	topLayout.numColumns = 3;
+	comp.setLayout(topLayout);
+	comp.setFont(font);
+
+	createVerticalSpacer(comp, 3);
+
+	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCPAChecker);
+	executableText = new Text(comp, SWT.SINGLE | SWT.BORDER);
+	GridData gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
+	gridData.horizontalSpan = 2;
+	executableText.setLayoutData(gridData);
+	executableText.addModifyListener(modifyListener);
+
+	Composite tempBrowseLayout = new Composite(comp, SWT.NONE);
+	gridData = new GridData(GridData.FILL_HORIZONTAL);
+	gridData.horizontalSpan = 3;
+	tempBrowseLayout.setLayoutData(gridData);
+
+	GridLayout browseButtonLayout = new GridLayout(4, false);
+	browseButtonLayout.marginHeight = browseButtonLayout.marginWidth = 0;
+	tempBrowseLayout.setLayout(browseButtonLayout);
+
+	Label tempLbl = new Label(tempBrowseLayout, SWT.NONE);
+	tempLbl.setLayoutData(new GridData(SWT.END, SWT.CENTER, true, false));
+
+	executableButton = createPushButton(tempBrowseLayout, Messages.MainLaunchingTab_labelBrowse, null);
+	executableButton.addSelectionListener(new SelectionAdapter() {
+	    public void widgetSelected(SelectionEvent e) {
+		CPACExecutableButtonSelected();
+	    }
+	});
+
+	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelFile);
+	sourceText = new Text(comp, SWT.SINGLE | SWT.BORDER);
+	gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
+	gridData.horizontalSpan = 2;
+	sourceText.setLayoutData(gridData);
+	sourceText.addModifyListener(modifyListener);
+	sourceText.setFont(font);
+
+	Composite tempButtonLayout = new Composite(comp, SWT.NONE);
+	gridData = new GridData(GridData.FILL_HORIZONTAL);
+	gridData.horizontalSpan = 3;
+	tempButtonLayout.setLayoutData(gridData);
+
+	GridLayout buttonLayout = new GridLayout(4, false);
+	buttonLayout.marginHeight = buttonLayout.marginWidth = 0;
+	tempButtonLayout.setLayout(buttonLayout);
+
+	Label tempLbl2 = new Label(tempButtonLayout, SWT.NONE);
+	tempLbl2.setLayoutData(new GridData(SWT.END, SWT.CENTER, true, false));
+
+	sourceFileButton = createPushButton(tempButtonLayout, Messages.MainLaunchingTab_sourcesBrowse, null);
+	sourceFileButton.addSelectionListener(new SelectionAdapter() {
+	    public void widgetSelected(SelectionEvent e) {
+		sourcesButtonSelected();
+	    }
+	});
+
+	Composite specLabelLayout = new Composite(comp, SWT.NONE);
+	gridData = new GridData(GridData.FILL_HORIZONTAL);
+	gridData.horizontalSpan = 4;
+	specLabelLayout.setLayoutData(gridData);
+
+	GridLayout spcLableGrid = new GridLayout(3, true);
+	spcLableGrid.numColumns = 2;
+	spcLableGrid.marginHeight = spcLableGrid.marginWidth = 0;
+	specLabelLayout.setLayout(spcLableGrid);
+
+	// new Label(specLabelLayout, SWT.NONE).setLayoutData(new GridData(SWT.END,
+	// SWT.CENTER, false, false));
+	Label spcLabel = new Label(specLabelLayout, SWT.NONE);
+	spcLabel.setText("Specification");
+	GridData specGridData = new GridData();
+	specGridData.horizontalIndent = 194;
+	spcLabel.setLayoutData(specGridData);
+
+	Label confLabel = new Label(specLabelLayout, SWT.NONE);
+	confLabel.setText("Configuration");
+	GridData confGridData = new GridData();
+	confGridData.horizontalIndent = 187;
+	confLabel.setLayoutData(confGridData);
+
+	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelProgramArgs);
+
+	specificationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
+	configurationCombo = SWTFactory.createCombo(comp, SWT.DROP_DOWN, 1, null);
+	specificationCombo.setEnabled(false);
+	configurationCombo.setEnabled(false);
+	configurationCombo.addModifyListener(modifyListener);
+	specificationCombo.addModifyListener(modifyListener);
+
+	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCommandLineArgs);
+	commandLineText = new Text(comp, SWT.SINGLE | SWT.BORDER);
+	gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
+	gridData.horizontalSpan = 2;
+	commandLineText.setLayoutData(gridData);
+	commandLineText.addModifyListener(modifyListener);
+    }
+
 
   @Override
   public String getName() {
