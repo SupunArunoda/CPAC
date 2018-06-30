@@ -1,5 +1,7 @@
 package org.eclipse.internal.cpacep.view;
 
+import java.util.List;
+
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.internal.cpacep.dialog.Statistics;
@@ -33,10 +35,12 @@ public class StatisticAction extends ActionEvent {
     @Override
     public void run() {
 	CpacepView cpacepView = CpacepView.getViewInstance();
+	List<org.eclipse.cpacep.util.Statistics> stats=cpacepView.getCPACEPConncetor().getStatistics();
 	Statistics dialog = new Statistics(cpacepView.getComposite().getShell());
+	dialog.setStats(stats);
 	dialog.create();
 	dialog.open();
-	cpacepView.getCPACEPConncetor().getStatistics();
+	
 //	if (dialog.open() == Window.OK) {
 //
 //	}
