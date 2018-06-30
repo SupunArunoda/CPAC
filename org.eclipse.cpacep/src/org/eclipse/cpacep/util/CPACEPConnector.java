@@ -127,7 +127,7 @@ public class CPACEPConnector {
 
 	public List<Statistics> getStatistics() {
 		List<String> lines = null;
-		String line;
+		// String line;
 		List<Statistics> stats = new ArrayList<>();
 
 		try {
@@ -137,18 +137,23 @@ public class CPACEPConnector {
 			e.printStackTrace();
 		}
 		if (lines != null) {
-			Statistics statistics = null;
-			for (int i = 0; i < lines.size(); i++) {
-				line = lines.get(i);
+			Statistics statistics = new Statistics();
+			for (String line : lines) {
 				if (line.contains("-----") || line.contains("======") || line.contains("Verification result")) {
 					if (statistics != null) {
-						statistics.getBody().remove(lines.get(i - 1));
-						stats.add(statistics);
+						if (statistics.getHeader() == null) {
+							statistics.setHeader(statistics.getLastAddedLine());
+						} else {
+							String tempHeader = statistics.getLastAddedLine();
+							statistics.removeLastLine();
+							statistics.removeHeaderFromBody();
+							stats.add(statistics);
+							statistics = new Statistics();
+							statistics.setHeader(tempHeader);
+						}
 					}
-					statistics = new Statistics(lines.get(i - 1), new ArrayList<String>());
-				} else if (statistics != null && !statistics.getHeader().equals(line)) {
-
-					statistics.getBody().add(line);
+				} else {
+					statistics.addLine(line);
 				}
 			}
 		}
