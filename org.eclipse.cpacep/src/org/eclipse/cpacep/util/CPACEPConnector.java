@@ -1,9 +1,6 @@
 package org.eclipse.cpacep.util;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.debug.core.ILaunchConfiguration;
@@ -128,4 +125,33 @@ public class CPACEPConnector {
 		this.result = result;
 	}
 
+	public List<StatisticsData> getStatistics() throws IOException {
+		List<String> lines = null;
+		List<StatisticsData> stats = new ArrayList<>();
+		lines = FileHandler.readFile(new File(outputDirectory + File.separator + "Statistics.txt"));
+
+		if (lines != null) {
+			StatisticsData statistics = new StatisticsData();
+			for (String line : lines) {
+				if (line.contains("-----") || line.contains("======") || line.contains("Verification result")) {
+					if (statistics != null) {
+						if (statistics.getHeader() == null) {
+							statistics.setHeader(statistics.getLastAddedLine());
+						} else {
+							String tempHeader = statistics.getLastAddedLine();
+							statistics.removeLastLine();
+							statistics.removeHeaderFromBody();
+							stats.add(statistics);
+							statistics = new StatisticsData();
+							statistics.setHeader(tempHeader);
+						}
+					}
+				} else {
+					statistics.addLine(line);
+				}
+			}
+
+		}
+		return stats;
+	}
 }

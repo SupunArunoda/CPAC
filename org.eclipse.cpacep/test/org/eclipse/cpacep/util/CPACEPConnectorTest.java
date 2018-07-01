@@ -11,17 +11,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class CPACEPConnectorTest {
+	String home = System.getProperty("user.home");
+	String tempDirectory = System.getProperty("java.io.tmpdir");
 	//String homePath = "/home/supun/Documents/cpachecker";
 	//Path homePath = Paths.get(File.separator + "home").resolve("supun").resolve("Documents").resolve("CPAchecker-1.7-unix");
-	//Path homePath = Paths.get("/home/supun/Documents/CPAchecker-1.7-unix");
-	Path homePath = Paths.get(File.separator + "home").resolve("travis").resolve("build").resolve("SupunArunoda").resolve("cpachecker");
+	//Path homePath = Paths.get(home, "Documents", "CPAchecker-1.7-unix");
+	Path homePath = Paths.get(home, "travis", "build", "SupunArunoda", "cpachecker");
 	//Path homePath = StringHandler.getHomePath(File.separator + "home" + File.separator + "travis" + File.separator + "build" + File.separator + "SupunArunoda" + File.separator + "cpachecker");
 	StringBuilder sb;
 	String lcSpecification;
 	String lcConfiguration;
 	String result;
 
-	Path outputPathOriginal = Paths.get(File.separator + "tmp").resolve("original");
+	Path outputPathOriginal = Paths.get(tempDirectory, "original");
 	File outputDirectory;
 
 	@Before
@@ -36,10 +38,10 @@ public class CPACEPConnectorTest {
 			throw new AssertionError();
 		}
 		sb = new StringBuilder();
-		sb.append(homePath.resolve("scripts").resolve("cpa.sh"));
-		sb.append(" -spec " + homePath.resolve("config").resolve("specification").resolve(lcSpecification + ".spc"));
-		sb.append(" -config " + homePath.resolve("config").resolve(lcConfiguration + ".properties"));
-		sb.append(" " + homePath.resolve("doc").resolve("examples").resolve("example.c"));
+		sb.append(Paths.get(homePath.toString(), "scripts", "cpa.sh"));
+		sb.append(" -spec " + Paths.get(homePath.toString(), "config", "specification", lcSpecification + ".spc"));
+		sb.append(" -config " + Paths.get(homePath.toString(), "config", lcConfiguration + ".properties"));
+		sb.append(" " + Paths.get(homePath.toString(), "doc", "examples", "example.c"));
 		sb.append(" -outputpath " + outputDirectory);
 		sb.append(" -stats");
 		cpacepConnector.executeCommand(sb.toString());
@@ -53,8 +55,8 @@ public class CPACEPConnectorTest {
 		List<String> expectData;
 		String testName = "Verification result:";
 		try {
-			actualData = FileHandler.readFile(new File(outputDirectory.getAbsolutePath() + File.separator + "Statistics.txt"));
-			expectData = FileHandler.readFile(new File(outputPathOriginal + File.separator + "Statistics.txt")); //$NON-NLS-1$
+			actualData = FileHandler.readFile(new File(Paths.get(outputDirectory.getAbsolutePath(), "Statistics.txt").toString()));
+			expectData = FileHandler.readFile(new File(Paths.get(outputPathOriginal.toString(), "Statistics.txt").toString())); //$NON-NLS-1$
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			throw new AssertionError(e.getMessage());
