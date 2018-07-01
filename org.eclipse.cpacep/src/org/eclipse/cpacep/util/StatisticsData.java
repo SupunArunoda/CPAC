@@ -2,12 +2,12 @@ package org.eclipse.cpacep.util;
 
 import java.util.List;
 
-public class Statistics {
+public class StatisticsData {
 
 	private String header;
 	private List<String> body;
 
-	public Statistics(String header, List<String> body) {
+	public StatisticsData(String header, List<String> body) {
 		this.header = header;
 		this.body = body;
 	}
