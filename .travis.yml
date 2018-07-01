@@ -9,4 +9,4 @@ before_script:
   - cd cpachecker
   - ant build
   - scripts/cpa.sh -spec config/specification/default.spc -config config/default.properties doc/examples/example.c -outputpath /tmp/original -stats
-  - cd..
+  - cd ..
