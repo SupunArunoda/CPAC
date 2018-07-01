@@ -155,4 +155,8 @@ public class CPACEPConnector {
 		return stats;
 	}
 
+	public String readReport() {
+		return outputDirectory + File.separator + "Report.html";
+	}
+
 }

@@ -2,9 +2,10 @@ package org.eclipse.internal.cpacep.view;
 
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.internal.cpacep.dialog.Report;
 
-public class ResultTableAction extends ActionEvent {
-    public ResultTableAction(ViewToolBar toolbar) {
+public class ReportAction extends ActionEvent {
+    public ReportAction(ViewToolBar toolbar) {
 	super(toolbar);
     }
 
@@ -30,7 +31,13 @@ public class ResultTableAction extends ActionEvent {
 
     @Override
     public void run() {
-
+	CpacepView cpacepView = CpacepView.getViewInstance();
+	String report = null;
+	report = cpacepView.getCPACEPConncetor().readReport();
+	Report reportDialog = new Report(cpacepView.getComposite().getShell());
+	reportDialog.setReport(report);
+	reportDialog.create();
+	reportDialog.open();
     }
 
 }
