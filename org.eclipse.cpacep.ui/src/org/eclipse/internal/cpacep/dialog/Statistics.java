@@ -2,6 +2,7 @@ package org.eclipse.internal.cpacep.dialog;
 
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.cpacep.util.StatisticsData;
 import org.eclipse.jface.dialogs.IMessageProvider;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -27,7 +28,7 @@ public class Statistics extends TitleAreaDialog {
     private List itemSet;
     private Text bodyText;
     
-    private java.util.List<org.eclipse.cpacep.util.Statistics> stats;
+    private java.util.List<StatisticsData> stats;
 
     public Statistics(Shell parentShell) {
 	super(parentShell);
@@ -103,7 +104,7 @@ public class Statistics extends TitleAreaDialog {
     public void itemSelectButton() {
 	bodyText.setText("");
 	String selection[]=itemSet.getSelection();
-	for(org.eclipse.cpacep.util.Statistics stat:getStatistics()) {
+	for(StatisticsData stat:getStatistics()) {
 	    if(stat.getHeader().equals(selection[selection.length-1])) {
 		bodyText.append(getBodyAsString(stat.getBody()));	
 	    }
@@ -120,7 +121,7 @@ public class Statistics extends TitleAreaDialog {
 	return stb.toString();
     }
     public void loadItems() {
-	for(org.eclipse.cpacep.util.Statistics stat:getStatistics()) {
+	for(StatisticsData stat:getStatistics()) {
 	    itemSet.add(stat.getHeader());
 	}
     }
@@ -135,11 +136,11 @@ public class Statistics extends TitleAreaDialog {
 	super.okPressed();
     }
     
-    public void setStats(java.util.List<org.eclipse.cpacep.util.Statistics> stats) {
+    public void setStats(java.util.List<StatisticsData> stats) {
 	this.stats=stats;
 	
     }
-    public java.util.List<org.eclipse.cpacep.util.Statistics> getStatistics(){
+    public java.util.List<StatisticsData> getStatistics(){
 	return stats;
     }
 
