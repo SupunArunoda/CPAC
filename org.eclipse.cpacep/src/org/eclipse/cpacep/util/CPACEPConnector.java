@@ -125,10 +125,10 @@ public class CPACEPConnector {
 		this.result = result;
 	}
 
-	public List<Statistics> getStatistics() {
+	public List<StatisticsData> getStatistics() {
 		List<String> lines = null;
 		String line;
-		List<Statistics> stats = new ArrayList<>();
+		List<StatisticsData> stats = new ArrayList<>();
 
 		try {
 			lines = FileHandler.readFile(new File(outputDirectory + File.separator + "Statistics.txt"));
@@ -137,7 +137,7 @@ public class CPACEPConnector {
 			e.printStackTrace();
 		}
 		if (lines != null) {
-			Statistics statistics = null;
+			StatisticsData statistics = null;
 			for (int i = 0; i < lines.size(); i++) {
 				line = lines.get(i);
 				if (line.contains("-----") || line.contains("======") || line.contains("Verification result")) {
@@ -145,7 +145,7 @@ public class CPACEPConnector {
 						statistics.getBody().remove(lines.get(i - 1));
 						stats.add(statistics);
 					}
-					statistics = new Statistics(lines.get(i - 1), new ArrayList<String>());
+					statistics = new StatisticsData(lines.get(i - 1), new ArrayList<String>());
 				} else if (statistics != null && !statistics.getHeader().equals(line)) {
 
 					statistics.getBody().add(line);
