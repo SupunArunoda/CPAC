@@ -1,5 +1,6 @@
 package org.eclipse.internal.cpacep.view;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.eclipse.core.runtime.IPath;
@@ -35,15 +36,21 @@ public class StatisticAction extends ActionEvent {
     @Override
     public void run() {
 	CpacepView cpacepView = CpacepView.getViewInstance();
-	List<StatisticsData> stats=cpacepView.getCPACEPConncetor().getStatistics();
+	List<StatisticsData> stats = null;
+	try {
+	    stats = cpacepView.getCPACEPConncetor().getStatistics();
+	} catch (IOException ex) {
+	    System.out.println("Error reading statistic file");
+	}
+
 	Statistics dialog = new Statistics(cpacepView.getComposite().getShell());
 	dialog.setStats(stats);
 	dialog.create();
 	dialog.open();
-	
-//	if (dialog.open() == Window.OK) {
-//
-//	}
+
+	// if (dialog.open() == Window.OK) {
+	//
+	// }
 
     }
 }
