@@ -125,19 +125,13 @@ public class CPACEPConnector {
 		this.result = result;
 	}
 
-	public List<Statistics> getStatistics() {
+	public List<StatisticsData> getStatistics() throws IOException {
 		List<String> lines = null;
-		// String line;
-		List<Statistics> stats = new ArrayList<>();
+		List<StatisticsData> stats = new ArrayList<>();
+		lines = FileHandler.readFile(new File(outputDirectory + File.separator + "Statistics.txt"));
 
-		try {
-			lines = FileHandler.readFile(new File(outputDirectory + File.separator + "Statistics.txt"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		if (lines != null) {
-			Statistics statistics = new Statistics();
+			StatisticsData statistics = new StatisticsData();
 			for (String line : lines) {
 				if (line.contains("-----") || line.contains("======") || line.contains("Verification result")) {
 					if (statistics != null) {
@@ -148,7 +142,7 @@ public class CPACEPConnector {
 							statistics.removeLastLine();
 							statistics.removeHeaderFromBody();
 							stats.add(statistics);
-							statistics = new Statistics();
+							statistics = new StatisticsData();
 							statistics.setHeader(tempHeader);
 						}
 					}
@@ -156,8 +150,8 @@ public class CPACEPConnector {
 					statistics.addLine(line);
 				}
 			}
+
 		}
 		return stats;
 	}
-
 }

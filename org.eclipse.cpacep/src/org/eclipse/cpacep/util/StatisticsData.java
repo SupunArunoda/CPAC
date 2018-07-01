@@ -3,12 +3,12 @@ package org.eclipse.cpacep.util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Statistics {
+public class StatisticsData {
 
 	private String header;
 	private List<String> body;
 
-	public Statistics() {
+	public StatisticsData() {
 		this.body = new ArrayList<String>();
 	}
 
@@ -26,6 +26,11 @@ public class Statistics {
 
 	public String getLastAddedLine() {
 		return body.get(body.size() - 1);
+	}
+
+	public StatisticsData(String header, List<String> body) {
+		this.header = header;
+		this.body = body;
 	}
 
 	public void setHeader(String header) {
