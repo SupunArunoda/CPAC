@@ -125,34 +125,33 @@ public class CPACEPConnector {
 		this.result = result;
 	}
 
-	public List<StatisticsData> getStatistics() {
+	public List<StatisticsData> getStatistics() throws IOException {
 		List<String> lines = null;
-		String line;
 		List<StatisticsData> stats = new ArrayList<>();
+		lines = FileHandler.readFile(new File(outputDirectory + File.separator + "Statistics.txt"));
 
-		try {
-			lines = FileHandler.readFile(new File(outputDirectory + File.separator + "Statistics.txt"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		if (lines != null) {
-			StatisticsData statistics = null;
-			for (int i = 0; i < lines.size(); i++) {
-				line = lines.get(i);
+			StatisticsData statistics = new StatisticsData();
+			for (String line : lines) {
 				if (line.contains("-----") || line.contains("======") || line.contains("Verification result")) {
 					if (statistics != null) {
-						statistics.getBody().remove(lines.get(i - 1));
-						stats.add(statistics);
+						if (statistics.getHeader() == null) {
+							statistics.setHeader(statistics.getLastAddedLine());
+						} else {
+							String tempHeader = statistics.getLastAddedLine();
+							statistics.removeLastLine();
+							statistics.removeHeaderFromBody();
+							stats.add(statistics);
+							statistics = new StatisticsData();
+							statistics.setHeader(tempHeader);
+						}
 					}
-					statistics = new StatisticsData(lines.get(i - 1), new ArrayList<String>());
-				} else if (statistics != null && !statistics.getHeader().equals(line)) {
-
-					statistics.getBody().add(line);
+				} else {
+					statistics.addLine(line);
 				}
 			}
+
 		}
 		return stats;
 	}
-
 }
