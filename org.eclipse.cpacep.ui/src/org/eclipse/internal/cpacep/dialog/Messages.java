@@ -13,6 +13,9 @@ public class Messages extends NLS {
 	public static String DialogViewForm_RightPanelTitle;
 	public static String DialogViewForm_LeftPanelTitle;
 	
+	public static String DialogViewForm_Report;
+	public static String DialogViewForm_ReportMessage;
+	
 	static {
 		// initialize resource bundle
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);

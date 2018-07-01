@@ -28,8 +28,8 @@ public class Report extends TitleAreaDialog {
     @Override
     public void create() {
 	super.create();
-	//setTitle(Messages.DialogViewForm_Report);
-	//setMessage(Messages.DialogViewForm_ReportMessage, IMessageProvider.INFORMATION);
+	setTitle(Messages.DialogViewForm_Report);
+	setMessage(Messages.DialogViewForm_ReportMessage, IMessageProvider.INFORMATION);
 	setTitleImage(getImage(new Path("icons/cpac_logo.png")));
 
     }
