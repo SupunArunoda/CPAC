@@ -12,30 +12,31 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
-public class LaunchConfigurationDelegate extends org.eclipse.debug.core.model.LaunchConfigurationDelegate {
+public class LaunchConfigurationDelegate
+    extends org.eclipse.debug.core.model.LaunchConfigurationDelegate {
 
-    public void launch(final ILaunchConfiguration configuration, String mode, final ILaunch launch,
-	    IProgressMonitor monitor) {
+  public void launch(final ILaunchConfiguration configuration, String mode, final ILaunch launch,
+      IProgressMonitor monitor) {
 
-	Display.getDefault().asyncExec(new Runnable() {
-	    @Override
-	    public void run() {
-		IWorkbenchPage page = null;
-		CpacepView view = null;
-		try {
-		    page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-		    view = (CpacepView) page.findView(CpacepView.ID);
-		    if (view == null) {
-			view = (CpacepView) page.showView(CpacepView.ID, null, IWorkbenchPage.VIEW_ACTIVATE);
-		    } else {
-			view.reset();
-		    }
-		    view.startValidation(CPACEPConnector.create(configuration), view);
+    Display.getDefault().asyncExec(new Runnable() {
+      @Override
+      public void run() {
+        IWorkbenchPage page = null;
+        CpacepView view = null;
+        try {
+          page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+          view = (CpacepView) page.findView(CpacepView.ID);
+          if (view == null) {
+            view = (CpacepView) page.showView(CpacepView.ID, null, IWorkbenchPage.VIEW_ACTIVATE);
+          } else {
+            view.reset();
+          }
+          view.startValidation(CPACEPConnector.create(configuration), view);
 
-		} catch (PartInitException e) {
-		    e.printStackTrace();
-		}
-	    }
-	});
-    }
+        } catch (PartInitException e) {
+          e.printStackTrace();
+        }
+      }
+    });
+  }
 }
