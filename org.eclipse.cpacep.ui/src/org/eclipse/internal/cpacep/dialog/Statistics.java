@@ -103,13 +103,14 @@ public class Statistics extends TitleAreaDialog {
     
     public void itemSelectButton() {
 	bodyText.setText("");
-	String selection[]=itemSet.getSelection();
-	for(StatisticsData stat:getStatistics()) {
-	    if(stat.getHeader().equals(selection[selection.length-1])) {
-		bodyText.append(getBodyAsString(stat.getBody()));	
+	String selection[] = itemSet.getSelection();
+	if (getStatistics() != null) {
+	    for (StatisticsData stat : getStatistics()) {
+		if (stat.getHeader().equals(selection[selection.length - 1])) {
+		    bodyText.append(getBodyAsString(stat.getBody()));
+		}
 	    }
 	}
-	
     }
     
     public String getBodyAsString(java.util.List<String> str) {
@@ -120,10 +121,14 @@ public class Statistics extends TitleAreaDialog {
 	}
 	return stb.toString();
     }
+
     public void loadItems() {
-	for(StatisticsData stat:getStatistics()) {
-	    itemSet.add(stat.getHeader());
+	if (getStatistics() != null) {
+	    for (StatisticsData stat : getStatistics()) {
+		itemSet.add(stat.getHeader());
+	    }
 	}
+
     }
 
     @Override

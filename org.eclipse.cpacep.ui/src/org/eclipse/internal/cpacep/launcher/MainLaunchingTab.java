@@ -244,6 +244,15 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	// TODO Auto-generated method stub
 	return Messages.MainLaunchingTab_name;
     }
+    
+    public void setDefaultValues() {
+	if (specificationData != null && specificationData.contains(Messages.MainLaunchingTab_defaultCombo)) {
+	    specificationCombo.setText(Messages.MainLaunchingTab_defaultCombo);
+	}
+	if (configurationData != null && configurationData.contains(Messages.MainLaunchingTab_defaultCombo)) {
+	    configurationCombo.setText(Messages.MainLaunchingTab_defaultCombo);
+	}
+    }
 
     private void CPACExecutableButtonSelected() {
 	FileDialog dialog = new FileDialog(getShell(), SWT.OPEN);
@@ -252,6 +261,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	String file = dialog.open();
 	if (file != null) {
 	    executableText.setText(file);
+	    setDefaultValues();
 	}
     }
 
