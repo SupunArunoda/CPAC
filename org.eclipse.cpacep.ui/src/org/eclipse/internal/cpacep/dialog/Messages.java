@@ -7,7 +7,6 @@ public class Messages extends NLS {
 
   private static final String BUNDLE_NAME = "org.eclipse.internal.cpacep.dialog.messages"; //$NON-NLS-1$
 
-
   public static String DialogViewForm_StatisticsTitle;
   public static String DialogViewForm_StatisticsMessage;
   public static String DialogViewForm_RightPanelTitle;
@@ -24,4 +23,3 @@ public class Messages extends NLS {
     return MessageFormat.format(message, objects);
   }
 }
-

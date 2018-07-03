@@ -21,8 +21,6 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.osgi.framework.FrameworkUtil;
 
-
-
 public class Statistics extends TitleAreaDialog {
 
   private List itemSet;
@@ -149,6 +147,5 @@ public class Statistics extends TitleAreaDialog {
   public java.util.List<StatisticsData> getStatistics() {
     return stats;
   }
-
 
 }
