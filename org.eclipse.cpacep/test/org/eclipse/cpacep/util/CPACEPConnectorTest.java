@@ -16,7 +16,7 @@ public class CPACEPConnectorTest {
 	//String homePath = "/home/supun/Documents/cpachecker";
 	//Path homePath = Paths.get(File.separator + "home").resolve("supun").resolve("Documents").resolve("CPAchecker-1.7-unix");
 	//Path homePath = Paths.get(home, "Documents", "CPAchecker-1.7-unix");
-	Path homePath = Paths.get(home, "build", "SupunArunoda", "cpachecker");
+	Path homePath = Paths.get(home, "build", "SupunArunoda", "CPACEP","cpachecker");
 	//Path homePath = StringHandler.getHomePath(File.separator + "home" + File.separator + "travis" + File.separator + "build" + File.separator + "SupunArunoda" + File.separator + "cpachecker");
 	StringBuilder sb;
 	String lcSpecification;
