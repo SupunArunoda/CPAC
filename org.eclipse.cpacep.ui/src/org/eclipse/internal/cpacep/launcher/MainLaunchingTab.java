@@ -30,94 +30,83 @@ import org.eclipse.ui.model.WorkbenchLabelProvider;
 
 public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 
-  private Text executableText;
-  private Button executableButton;
-  private Text sourceText;
-  private Button sourceFileButton;
-  private Combo specificationCombo;
-  private Combo configurationCombo;
-  private Text commandLineText;
-  private boolean isComboEnable;
-  private boolean isUpdateComboData;
-  private String dummySpace = "                                                          ";
+    private Text executableText;
+    private Button executableButton;
+    private Text sourceText;
+    private Button sourceFileButton;
+    private Combo specificationCombo;
+    private Combo configurationCombo;
+    private Text commandLineText;
+    private boolean isComboEnable;
+    private boolean isUpdateComboData;
+    private String dummySpace = "                                                          ";
 
-  private ArrayList<String> specificationData;
-  private ArrayList<String> configurationData;
+    private ArrayList<String> specificationData;
+    private ArrayList<String> configurationData;
 
-  ModifyListener modifyListener = new ModifyListener() {
+    ModifyListener modifyListener=new ModifyListener(){@Override public void modifyText(ModifyEvent e){if(executableText!=null){updateComboBox();}scheduleUpdateJob();}};
+
     @Override
-    public void modifyText(ModifyEvent e) {
-      if (executableText != null) {
-        updateComboBox();
-      }
-      scheduleUpdateJob();
+    public boolean canSave() {
+	return true;
     }
-  };
 
-  @Override
-  public boolean canSave() {
-    return true;
-  }
-
-  @Override
-  public boolean isValid(ILaunchConfiguration launchConfig) {
-    setMessage(null);
-    setErrorMessage(null);
-    return true;
-  }
-
-  @Override
-  public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
-    // TODO Auto-generated method stub
-
-  }
-
-  @Override
-  public void initializeFrom(ILaunchConfiguration configuration) {
-    // TODO Auto-generated method stub
-    try {
-      executableText.setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_EXECUTABLE,
-          CPACEPConnector.NO_VALUE));
-      sourceText.setText(
-          configuration.getAttribute(CPACEPConnector.LC_CPACEP_SOURCE, CPACEPConnector.NO_VALUE));
-      commandLineText.setText(
-          configuration.getAttribute(CPACEPConnector.LC_CPACEP_CMD, CPACEPConnector.NO_VALUE));
-      isComboEnable = configuration.getAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, false);
-      specificationCombo.setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_SPECIFICATION,
-          Messages.MainLaunchingTab_specificationCombo));
-      configurationCombo.setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION,
-          Messages.MainLaunchingTab_configurationCombo));
-      if (isComboEnable) {
-        updateComboBox();
-      }
-    } catch (CoreException e) {
-      // TODO: handle exception
-      e.printStackTrace();
+    @Override
+    public boolean isValid(ILaunchConfiguration launchConfig) {
+	setMessage(null);
+	setErrorMessage(null);
+	return true;
     }
-  }
 
-  @Override
-  public void performApply(ILaunchConfigurationWorkingCopy configuration) {
-    // TODO Auto-generated method stub
+    @Override
+    public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
+	// TODO Auto-generated method stub
 
-    if (isDirty()) {
-      String exec = executableText.getText().trim();
-      configuration.setAttribute(CPACEPConnector.LC_CPACEP_EXECUTABLE,
-          exec.toString().length() == 0 ? null : exec);
-      String src = sourceText.getText().trim();
-      configuration.setAttribute(CPACEPConnector.LC_CPACEP_SOURCE,
-          src.toString().length() == 0 ? null : src);
-      String spec = specificationCombo.getText().trim();
-      configuration.setAttribute(CPACEPConnector.LC_CPACEP_SPECIFICATION,
-          spec.toString().length() == 0 ? null : spec);
-      String conf = configurationCombo.getText().trim();
-      configuration.setAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION,
-          conf.toString().length() == 0 ? null : conf);
-      String cmd = commandLineText.getText().trim();
-      configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD,
-          cmd.toString().length() == 0 ? null : cmd);
-      configuration.setAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, true);
-      }
+    }
+
+    @Override
+    public void initializeFrom(ILaunchConfiguration configuration) {
+	// TODO Auto-generated method stub
+	try {
+	    executableText.setText(
+		    configuration.getAttribute(CPACEPConnector.LC_CPACEP_EXECUTABLE, CPACEPConnector.NO_VALUE));
+	    sourceText.setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_SOURCE, CPACEPConnector.NO_VALUE));
+	    commandLineText
+		    .setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_CMD, CPACEPConnector.NO_VALUE));
+	    isComboEnable = configuration.getAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, false);
+	    specificationCombo.setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_SPECIFICATION,
+		    Messages.MainLaunchingTab_specificationCombo));
+	    configurationCombo.setText(configuration.getAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION,
+		    Messages.MainLaunchingTab_configurationCombo));
+	    if (isComboEnable) {
+		updateComboBox();
+	    }
+	} catch (CoreException e) {
+	    // TODO: handle exception
+	    e.printStackTrace();
+	}
+    }
+
+    @Override
+    public void performApply(ILaunchConfigurationWorkingCopy configuration) {
+	// TODO Auto-generated method stub
+
+	if (isDirty()) {
+	    String exec = executableText.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_EXECUTABLE,
+		    exec.toString().length() == 0 ? null : exec);
+	    String src = sourceText.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_SOURCE, src.toString().length() == 0 ? null : src);
+	    String spec = specificationCombo.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_SPECIFICATION,
+		    spec.toString().length() == 0 ? null : spec);
+	    String conf = configurationCombo.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CONFIGURATION,
+		    conf.toString().length() == 0 ? null : conf);
+	    String cmd = commandLineText.getText().trim();
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_CMD, cmd.toString().length() == 0 ? null : cmd);
+	    configuration.setAttribute(CPACEPConnector.LC_CPACEP_ENABLE_COMBO, true);
+	}
     }
 
     @Override
@@ -230,116 +219,126 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 	commandLineText.addModifyListener(modifyListener);
     }
 
-
-  @Override
-  public String getName() {
-    // TODO Auto-generated method stub
-    return Messages.MainLaunchingTab_name;
-  }
-
-  private void CPACExecutableButtonSelected() {
-    FileDialog dialog = new FileDialog(getShell(), SWT.OPEN);
-    dialog.setText(Messages.MainLaunchingTab_dialogCPA);
-    dialog.setFilterNames(new String[] {"cpa*"}); //$NON-NLS-1$
-    String file = dialog.open();
-    if (file != null) {
-      executableText.setText(file);
-    }
-  }
-
-  private void updateComboBox() {
-    if (!isUpdateComboData && !executableText.getText().isEmpty()) {
-      Path homeDir = StringHandler.getHomePath(executableText.getText().trim());
-      Path configDir = homeDir.resolve("config");
-      try {
-        specificationData =
-            FileHandler.fileMatcher("glob:*.spc", configDir.resolve("specification"));
-        configurationData = FileHandler.fileMatcher("glob:*.properties", configDir);
-        if (specificationData != null) {
-          specificationCombo.setEnabled(true);
-
-          for (String spec : specificationData) {
-            specificationCombo.add(spec);
-          }
-        }
-        if (configurationData != null) {
-          configurationCombo.setEnabled(true);
-
-          for (String conf : configurationData) {
-            configurationCombo.add(conf);
-          }
-        }
-
-        if (configurationCombo.getEnabled() && specificationCombo.getEnabled()) {
-          isComboEnable = true;
-        } else {
-          isComboEnable = false;
-        }
-
-        addAutoCompleteFeature(specificationCombo);
-        addAutoCompleteFeature(configurationCombo);
-      } catch (IOException e) {
-        // TODO: handle exception
-        e.printStackTrace();
-      }
-      isUpdateComboData = true;
-    }
-  }
-
-  void sourcesButtonSelected() {
-    FileDialog dialog = new FileDialog(getShell(), SWT.OPEN);
-    dialog.setText(Messages.MainLaunchingTab_dialogSourcesMessage);
-    dialog.setFilterNames(new String[] {"*.c"}); //$NON-NLS-1$
-    String file = dialog.open();
-    if (file != null) {
-      sourceText.setText(file);
+    @Override
+    public String getName() {
+	// TODO Auto-generated method stub
+	return Messages.MainLaunchingTab_name;
     }
 
-  }
+    public void setDefaultValues() {
+	if (specificationData != null && specificationData.contains(Messages.MainLaunchingTab_defaultCombo)) {
+	    specificationCombo.setText(Messages.MainLaunchingTab_defaultCombo);
+	}
+	if (configurationData != null && configurationData.contains(Messages.MainLaunchingTab_defaultCombo)) {
+	    configurationCombo.setText(Messages.MainLaunchingTab_defaultCombo);
+	}
+    }
 
-  /**
-   * 
-   * @param combo Function to auto complete the combo box
-   */
-  public static void addAutoCompleteFeature(Combo combo) {
-    // Add a key listener
-    combo.addKeyListener(new KeyAdapter() {
-      public void keyReleased(KeyEvent keyEvent) {
-        Combo cmb = ((Combo) keyEvent.getSource());
-        setClosestMatch(cmb);
-      }
+    private void CPACExecutableButtonSelected() {
+	FileDialog dialog = new FileDialog(getShell(), SWT.OPEN);
+	dialog.setText(Messages.MainLaunchingTab_dialogCPA);
+	dialog.setFilterNames(new String[] { "cpa*" }); //$NON-NLS-1$
+	String file = dialog.open();
+	if (file != null) {
+	    executableText.setText(file);
+	    setDefaultValues();
+	}
+    }
 
-      // Move the highlight back by one character for backspace
-      public void keyPressed(KeyEvent keyEvent) {
-        if (keyEvent.keyCode == SWT.BS) {
-          Combo cmb = ((Combo) keyEvent.getSource());
-          Point pt = cmb.getSelection();
-          cmb.setSelection(new Point(Math.max(0, pt.x - 1), pt.y));
-        }
-      }
+    private void updateComboBox() {
+	if (!isUpdateComboData && !executableText.getText().isEmpty()) {
+	    Path homeDir = StringHandler.getHomePath(executableText.getText().trim());
+	    Path configDir = homeDir.resolve("config");
+	    try {
+		specificationData = FileHandler.fileMatcher("glob:*.spc", configDir.resolve("specification"));
+		configurationData = FileHandler.fileMatcher("glob:*.properties", configDir);
+		if (specificationData != null) {
+		    specificationCombo.setEnabled(true);
 
-      private void setClosestMatch(Combo combo) {
-        String str = combo.getText();
-        String[] cItems = combo.getItems();
-        // Find Item in Combo Items. If full match returns index
-        int index = -1;
-        for (int i = 0; i < cItems.length; i++) {
-          if (cItems[i].toLowerCase().startsWith(str.toLowerCase())) {
-            index = i;
-            break;
-          }
-        }
+		    for (String spec : specificationData) {
+			specificationCombo.add(spec);
+		    }
+		}
+		if (configurationData != null) {
+		    configurationCombo.setEnabled(true);
 
-        if (index != -1) {
-          Point pt = combo.getSelection();
-          combo.select(index);
-          combo.setText(cItems[index]);
-          combo.setSelection(new Point(pt.x, cItems[index].length()));
-        } else {
-          combo.setText("");
-        }
-      }
-    });
-  }
+		    for (String conf : configurationData) {
+			configurationCombo.add(conf);
+		    }
+		}
+
+		if (configurationCombo.getEnabled() && specificationCombo.getEnabled()) {
+		    isComboEnable = true;
+		} else {
+		    isComboEnable = false;
+		}
+
+		addAutoCompleteFeature(specificationCombo);
+		addAutoCompleteFeature(configurationCombo);
+	    } catch (IOException e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	    }
+	    isUpdateComboData = true;
+	}
+
+    }
+
+    void sourcesButtonSelected() {
+	FileDialog dialog = new FileDialog(getShell(), SWT.OPEN);
+	dialog.setText(Messages.MainLaunchingTab_dialogSourcesMessage);
+	dialog.setFilterNames(new String[] { "*.c" }); //$NON-NLS-1$
+	String file = dialog.open();
+	if (file != null) {
+	    sourceText.setText(file);
+	}
+
+    }
+
+    /**
+     * 
+     * @param combo
+     *            Function to auto complete the combo box
+     */
+    public static void addAutoCompleteFeature(Combo combo) {
+	// Add a key listener
+	combo.addKeyListener(new KeyAdapter() {
+	    public void keyReleased(KeyEvent keyEvent) {
+		Combo cmb = ((Combo) keyEvent.getSource());
+		setClosestMatch(cmb);
+	    }
+
+	    // Move the highlight back by one character for backspace
+	    public void keyPressed(KeyEvent keyEvent) {
+		if (keyEvent.keyCode == SWT.BS) {
+		    Combo cmb = ((Combo) keyEvent.getSource());
+		    Point pt = cmb.getSelection();
+		    cmb.setSelection(new Point(Math.max(0, pt.x - 1), pt.y));
+		}
+	    }
+
+	    private void setClosestMatch(Combo combo) {
+		String str = combo.getText();
+		String[] cItems = combo.getItems();
+		// Find Item in Combo Items. If full match returns index
+		int index = -1;
+		for (int i = 0; i < cItems.length; i++) {
+		    if (cItems[i].toLowerCase().startsWith(str.toLowerCase())) {
+			index = i;
+			break;
+		    }
+		}
+
+		if (index != -1) {
+		    Point pt = combo.getSelection();
+		    combo.select(index);
+		    combo.setText(cItems[index]);
+		    combo.setSelection(new Point(pt.x, cItems[index].length()));
+		} else {
+		    combo.setText("");
+		}
+	    }
+	});
+    }
 
 }
