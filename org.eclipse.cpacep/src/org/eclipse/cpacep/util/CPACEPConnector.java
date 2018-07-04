@@ -1,6 +1,7 @@
 package org.eclipse.cpacep.util;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.debug.core.ILaunchConfiguration;
@@ -33,7 +34,7 @@ public class CPACEPConnector {
 	private String lcSpecification;
 	private String lcConfiguration;
 
-	private String CPACheckerHome;
+	private Path CPACheckerHome;
 	private String result;
 
 	private Process p;
@@ -60,7 +61,7 @@ public class CPACEPConnector {
 	}
 
 	public void setCPACheckerHome() {
-		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable).toString();
+		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable);
 	}
 
 	public void setOutputDirectory() throws IOException {
@@ -80,7 +81,7 @@ public class CPACEPConnector {
 
 		StringBuilder output = new StringBuilder();
 		try {
-			p = Runtime.getRuntime().exec(command);
+			p = Runtime.getRuntime().exec(command, null, CPACheckerHome.toFile());
 			//p.waitFor();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
