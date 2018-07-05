@@ -85,7 +85,7 @@ public class MainLaunchingTab extends AbstractLaunchConfigurationTab {
 
 	createVerticalSpacer(comp, 3);
 
-	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCPAChecker);
+	new Label(comp, SWT.NONE).setText(Messages.MainLaunchingTab_labelCPAchecker);
 	executableText = new Text(comp, SWT.SINGLE | SWT.BORDER);
 	GridData gridData = new GridData(GridData.FILL, GridData.CENTER, true, false);
 	gridData.horizontalSpan = 2;

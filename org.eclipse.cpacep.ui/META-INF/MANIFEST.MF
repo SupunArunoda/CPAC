@@ -4,7 +4,7 @@ Bundle-Name: Ui
 Bundle-SymbolicName: org.eclipse.cpacep.ui;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipse.internal.cpacep.Activator
-Bundle-Vendor: CPAChecker
+Bundle-Vendor: CPAchecker
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.edit.ui,
  org.eclipse.debug.ui,
