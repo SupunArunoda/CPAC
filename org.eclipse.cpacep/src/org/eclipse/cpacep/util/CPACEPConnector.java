@@ -34,7 +34,7 @@ public class CPACEPConnector {
 	private String lcSpecification;
 	private String lcConfiguration;
 
-	private Path CPACheckerHome;
+	private Path CPAcheckerHome;
 	private String result;
 
 	private Process p;
@@ -51,7 +51,7 @@ public class CPACEPConnector {
 			lcCommandLine = config.getAttribute(LC_CPACEP_CMD, NO_VALUE);
 			lcSpecification = config.getAttribute(LC_CPACEP_SPECIFICATION, NO_VALUE);
 			lcConfiguration = config.getAttribute(LC_CPACEP_CONFIGURATION, NO_VALUE);
-			setCPACheckerHome();
+			setCPAcheckerHome();
 			setOutputDirectory();
 
 		} catch (Exception e) {
@@ -60,8 +60,8 @@ public class CPACEPConnector {
 		}
 	}
 
-	public void setCPACheckerHome() {
-		CPACheckerHome = StringHandler.getHomePath(lcCPACEPExecutable);
+	public void setCPAcheckerHome() {
+		CPAcheckerHome = StringHandler.getHomePath(lcCPACEPExecutable);
 	}
 
 	public void setOutputDirectory() throws IOException {
@@ -70,8 +70,8 @@ public class CPACEPConnector {
 
 	private void initializeBaseCommandLine() {
 		baseCli.add(lcCPACEPExecutable);
-		baseCli.add(" -spec " + CPACheckerHome + File.separator + "config" + File.separator + "specification" + File.separator + lcSpecification + SPEC_FILE_TYPE);
-		baseCli.add(" -config " + CPACheckerHome + File.separator + "config" + File.separator + lcConfiguration + CONFIG_FILE_TYPE);
+		baseCli.add(" -spec " + CPAcheckerHome + File.separator + "config" + File.separator + "specification" + File.separator + lcSpecification + SPEC_FILE_TYPE);
+		baseCli.add(" -config " + CPAcheckerHome + File.separator + "config" + File.separator + lcConfiguration + CONFIG_FILE_TYPE);
 		baseCli.add(lcCommandLine);
 		baseCli.add(lcSourceFile);
 		baseCli.add(" -outputpath " + outputDirectory);
@@ -81,7 +81,7 @@ public class CPACEPConnector {
 
 		StringBuilder output = new StringBuilder();
 		try {
-			p = Runtime.getRuntime().exec(command, null, CPACheckerHome.toFile());
+			p = Runtime.getRuntime().exec(command, null, CPAcheckerHome.toFile());
 			//p.waitFor();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 

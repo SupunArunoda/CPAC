@@ -7,7 +7,7 @@ public class Messages extends NLS {
 	private static final String BUNDLE_NAME = "org.eclipse.internal.cpacep.launcher.messages"; //$NON-NLS-1$
 	public static String MainLaunchingTab_name;
 
-	public static String MainLaunchingTab_labelCPAChecker;
+	public static String MainLaunchingTab_labelCPAchecker;
 	public static String MainLaunchingTab_labelFile;
 	public static String MainLaunchingTab_labelBrowse;
 	public static String MainLaunchingTab_projectsBrowse;
