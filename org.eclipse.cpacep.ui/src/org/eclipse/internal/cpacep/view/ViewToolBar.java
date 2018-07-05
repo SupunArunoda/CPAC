@@ -9,14 +9,14 @@ public class ViewToolBar {
     private RunAction runAction;
     private StopAction stopAction;
     private StatisticAction statisticAction;
-    private ResultTableAction resultTableAction;
+    private ReportAction resultTableAction;
 
     public ViewToolBar(IToolBarManager toolBarManager) {
 	this.toolBarManager = toolBarManager;
 	runAction = new RunAction(this);
 	stopAction = new StopAction(this);
 	statisticAction = new StatisticAction(this);
-	resultTableAction = new ResultTableAction(this);
+	resultTableAction = new ReportAction(this);
 	enableActions(false);
 	toolBarManager.add(runAction);
 	toolBarManager.add(stopAction);
