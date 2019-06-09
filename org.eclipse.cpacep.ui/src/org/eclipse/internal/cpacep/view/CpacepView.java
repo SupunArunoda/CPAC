@@ -1,14 +1,8 @@
 package org.eclipse.internal.cpacep.view;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
-
 import org.eclipse.cpacep.util.CPACEPConnector;
 import org.eclipse.cpacep.util.StringHandler;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.DisposeEvent;
-import org.eclipse.swt.events.DisposeListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
